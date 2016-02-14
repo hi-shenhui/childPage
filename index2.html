@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html v-cloak>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>家园网-校园资讯</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/changePart2.css" />
+
+		<script src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/vue.min.js"></script>
+
+	</head>
+
+	<body>
+		<div class="head-wrapper" id="top">
+			<div class="logo">
+
+				<div class="name-content">
+
+					<div class="clearFloat"></div>
+				</div>
+			</div>
+			<img class="right-img" src="img/tri-bg-2.png">
+			<div class="clearFloat"></div>
+		</div>
+		<div class="search-content">
+			<div class="layout">
+				<div class="column">
+					<a href="#">首页</a>
+					<a href="#">校园资讯</a>
+					<a href="#">学生教育</a>
+					<a href="#">学生管理</a>
+					<a href="#">互联家园</a>
+					<a href="#">香樟家园</a>
+				</div>
+				<img class="search-icon" src="img/search-icon.png" />
+				<input class="search-box" placeholder="请输入关键字" />
+				<div class="clearFloat"></div>
+			</div>
+		</div>
+		<div class="clearFloat"></div>
+		<!--头部以及搜索框-->
+		<div class="banner-wrapper layout">
+			<img class="home-icon" src="img/iconfont-home.png" />
+			<a href="#">当前位置  :</a>
+			<a href="#">家园首页  ></a>
+			<a href="#">校园资讯  ></a>
+			<a href="#">校园动态  ></a>
+		</div>
+
+		<!--校园动态 ，信息公告，家园视点，媒体关注小节点切换-->
+		<div class="content-wrapper layout" v-cloak>
+			<div class="left-content" id="layout">
+				<h2>{{title}}</h2>
+				<span class="date">{{time}}</span>
+				<span class="author"> | 作者：{{author}}</span>
+				<div class="dotted"></div>
+				<div class="article">
+					<p>{{article}}</p>
+
+					<img src="{{imgSrc}}" />
+
+				</div>
+
+				<div class="comment-wrapper">
+					<div class="number-count">
+						<div class="likes">
+							<div class="likes-icon"></div>
+							<div class="likes-num">{{likes}}</div>
+
+						</div>
+						
+					</div>
+					<div class="share">
+						<span class="share-info">分享到</span>
+						<button class="qq-share"></button>
+						<button class="weixin-share"></button>
+						<button class="weibo-share"></button>
+					</div>
+					<div class="clearFloat"></div>
+					<div class="dotted"></div>
+					
+				</div>
+
+			</div>
+
+			<!--左侧主要内容-->
+			<div class="right-content" v-cloak>
+				<div class="down">
+					<div class="head-download">
+						<div class="downLoadWrapper">
+							<h1>资料下载</h1>
+							<button class="more-download">更多</button>
+							<div class="clearFloat"></div>
+						</div>
+
+						<div class="downLoadBox" id="download" v-for="download in downloads">
+							<div class="day">
+								<span class="month">{{download.pushDay}}/</span>
+								<span class="secondDay">{{download.pushMouth}}月</span>
+							</div>
+							<div class="title">
+								{{download.resourceTitle}}
+							</div>
+							<div class="clearFloat"></div>
+						</div>
+
+					</div>
+				</div>
+				<div class="person">
+					<div class="PersonWrapper">
+						<h1>校园人物</h1>
+						<button class="someMore">更多</button>
+						<div class="line"></div>
+						<div class="clearFloat"></div>
+
+						<div class="section-focus-pic" id="section-focus-pic">
+							<div class="pages" data-scro="list">
+								<ul>
+									<li class="item" style="left:0px;">
+										<a href="#" target="_blank">
+											<img src="img/num_1.png" width="100%" height="265">
+										</a>
+
+										<h3>
+				    <a href="#" target="_blank" style="color:#FFF;text-decoration:none;">第一张图片</a>
+				</h3>
+										<div></div>
+									</li>
+									<li class="item">
+										<a href="#" target="_blank"><img src="img/num_2.png" width="100%" height="265"></a>
+										<h3><a href="#" target="_blank" style="color: #FFF; text-decoration:none;">第二张图片</a></h3>
+										<div></div>
+									</li>
+									<li class="item">
+										<a href="#" target="_blank"><img src="img/num_3.png" width="100%" height="265"></a>
+										<h3>
+				<a href="#" target="_blank" style="color: #FFF; text-decoration:none;">第三张图片</a></h3>
+										<div></div>
+									</li>
+									<li class="item">
+										<a href="#" target="_blank"><img src="img/num_4.png" width="100%" height="265"></a>
+										<h3>
+				<a href="#" target="_blank" style="color: #FFF; text-decoration:none;">第四张图片</a></h3>
+										<div></div>
+									</li>
+								</ul>
+							</div>
+							<div class="controler" data-scro="controler">
+								<b class="down">1</b>
+								<b>2</b>
+								<b>3</b>
+								<b>4</b>
+							</div>
+
+							<div class="controler2" data-scro="controler2">
+								<a href="javascript:;" class="prev"><i></i></a>
+								<a href="javascript:;" class="next"><i></i></a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!--资料下载，校园人物-->
+			<div class="clearFloat"></div>
+		</div>
+
+		<!--更新按钮-->
+		<div class="link">
+			<div class="contents">
+				<ul class="links">
+					<li class="links_li">
+						<ul>
+							<li><a href="">南昌大学</a></li>
+							<li><a href="">南昌大学新闻网</a></li>
+							<li><a href="">南昌大学教务在线</a></li>
+							<li><a href="">南昌大学招就信息网</a></li>
+						</ul>
+					</li>
+					<li class="links_li">
+						<ul>
+							<li><a href="">南昌大学</a></li>
+							<li><a href="">南昌大学新闻网</a></li>
+							<li><a href="">南昌大学教务在线</a></li>
+							<li><a href="">南昌大学招就信息网</a></li>
+						</ul>
+					</li>
+					<li class="links_li" id="erContainer" style="position:relative;">
+						<a href="http://user.qzone.qq.com/1503241991" class="qq" index="1"></a>
+						<a href="http://weibo.com/ncuhome" class="weibo" index="2"></a>
+						<a href="http://wx.ncuhome.cn" class="weixin" index="3"></a>
+						<img src="img/weixiner.png" class="erweima">
+					</li>
+					<div class="clearFloat"></div>
+				</ul>
+			</div>
+		</div>
+		<div class="login">
+			<a href="http://passport.ncuhome.cn/NewXZZX/"></a>
+		</div>
+		<div class="return-top">
+			<a href="#top"></a>
+		</div>
+		<div class="footer">
+			<div class="contents">
+				<p>Copyright 2001-2015 Nanchang University. All Rights Reserved. 赣B2-20050168号/网备36011002000011号</p>
+			</div>
+		</div>
+
+	</body>
+	<script src="js/data2.js"></script>
+	<script src="js/index.js"></script>
+
+</html>
