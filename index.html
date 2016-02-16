@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html v-cloak>
+<html  >
 
 	<head>
 		<meta charset="utf-8" />
@@ -11,8 +11,6 @@
 		<link rel="stylesheet" href="css/changePart1.css" />
 		<script src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/vue.min.js"></script>
-
-
 	</head>
 
 	<body>
@@ -65,7 +63,7 @@
 		<!--校园动态 ，信息公告，家园视点，媒体关注小节点切换-->
 		<div class="content-wrapper layout">
 			<div class="left-content" id="intr">
-				<div class="block" id="block" v-for="infor in infors" v-cloak>
+				<div class="block" id="block" v-for="infor in infors"  >
 					<img class="content-img" v-if="infor.hasPic" title="{{infor.inforHead}}" alt="{{infor.inforHead}}" src="{{infor.imgSrc}}" />
 					<div class="intr">
 						<a href="#" class="headname" id="headname">{{infor.inforHead}}</a>
@@ -79,14 +77,13 @@
 							</div>
 						</div>
 					</div>
-
 				</div>
-			
-
 				<div class="shadow ">
 					<img class="shadow-l" src="img/shadow-l.png"></img>
 					<img class="shadow-r" src="img/shadow-r.png" /></img>
+					<div class="clearFloat"></div>
 				</div>
+				<div class="reload-icon" id="reload" v-on:click="refresh()"></div>
 			</div>
 
 			<!--左侧主要内容-->
@@ -121,34 +118,19 @@
 
 						<div class="section-focus-pic" id="section-focus-pic">
 							<div class="pages" data-scro="list">
-								<ul>
-									<li class="item" style="left:0px;">
-										<a href="#" target="_blank">
-											<img src="img/num_1.png" width="100%" height="265">
+								
+								<ul id="person" >
+									
+									<li class="item" v-for="person in persons" >
+										<a href="{{person.url}}" target="_blank">
+											<img src="{{person.headpic}}" width="100%" height="220">
 										</a>
-
 										<h3>
-				    <a href="#" target="_blank" style="color:#FFF;text-decoration:none;">第一张图片</a>
+				    <a href="{{person.url}}" target="_blank" style="color:#FFF;text-decoration:none;">{{person.personInfor}}</a>
 				</h3>
 										<div></div>
 									</li>
-									<li class="item">
-										<a href="#" target="_blank"><img src="img/num_2.png" width="100%" height="265"></a>
-										<h3><a href="#" target="_blank" style="color: #FFF; text-decoration:none;">第二张图片</a></h3>
-										<div></div>
-									</li>
-									<li class="item">
-										<a href="#" target="_blank"><img src="img/num_3.png" width="100%" height="265"></a>
-										<h3>
-				<a href="#" target="_blank" style="color: #FFF; text-decoration:none;">第三张图片</a></h3>
-										<div></div>
-									</li>
-									<li class="item">
-										<a href="#" target="_blank"><img src="img/num_4.png" width="100%" height="265"></a>
-										<h3>
-				<a href="#" target="_blank" style="color: #FFF; text-decoration:none;">第四张图片</a></h3>
-										<div></div>
-									</li>
+									
 								</ul>
 							</div>
 							<div class="controler" data-scro="controler">
@@ -169,7 +151,7 @@
 			</div>
 			<!--资料下载，校园人物-->
 			<div class="clearFloat"></div>
-			<div class="reload-icon" id="reload" v-on:click="reload"></div>
+			
 		</div>
 
 		<!--更新按钮-->

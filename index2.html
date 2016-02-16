@@ -120,34 +120,18 @@
 
 						<div class="section-focus-pic" id="section-focus-pic">
 							<div class="pages" data-scro="list">
-								<ul>
-									<li class="item" style="left:0px;">
-										<a href="#" target="_blank">
-											<img src="img/num_1.png" width="100%" height="265">
+								<ul id="person" v-for="person in persons">
+									
+									<li class="item">
+										<a href="{{person.url}}" target="_blank">
+											<img src="{{person.headpic}}" width="100%" height="265">
 										</a>
-
 										<h3>
-				    <a href="#" target="_blank" style="color:#FFF;text-decoration:none;">第一张图片</a>
+				    <a href="{{person.url}}" target="_blank" style="color:#FFF;text-decoration:none;">{{person.personInfor}}</a>
 				</h3>
 										<div></div>
 									</li>
-									<li class="item">
-										<a href="#" target="_blank"><img src="img/num_2.png" width="100%" height="265"></a>
-										<h3><a href="#" target="_blank" style="color: #FFF; text-decoration:none;">第二张图片</a></h3>
-										<div></div>
-									</li>
-									<li class="item">
-										<a href="#" target="_blank"><img src="img/num_3.png" width="100%" height="265"></a>
-										<h3>
-				<a href="#" target="_blank" style="color: #FFF; text-decoration:none;">第三张图片</a></h3>
-										<div></div>
-									</li>
-									<li class="item">
-										<a href="#" target="_blank"><img src="img/num_4.png" width="100%" height="265"></a>
-										<h3>
-				<a href="#" target="_blank" style="color: #FFF; text-decoration:none;">第四张图片</a></h3>
-										<div></div>
-									</li>
+									
 								</ul>
 							</div>
 							<div class="controler" data-scro="controler">

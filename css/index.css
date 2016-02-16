@@ -535,8 +535,8 @@ input:-ms-input-placeholder {
 }
 .reload-icon {
 	position: absolute;
-	bottom: 10px;
-	left: 32%;
+	bottom: -100px;
+	left: 45%;
 	width: 66px;
 	height: 66px;
 	background: url(../img/reload.png);

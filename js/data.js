@@ -1,104 +1,63 @@
 var intr = new Vue({
 	el: "#intr",
 	data: {
-		infors: [{
-			hasPic: true,
-			inforHead: "过年啦要过年啦红红火火恍恍惚惚1",
-			inforContent: "内容内容内容内容内容内容我是来凑字数的凑字数内容内容内容内容内容内容我是来凑字数的凑字数内容内容内容内容内容内容我是来凑字数的凑字数内容内容内容内容内容内容我是来凑字数的凑字数内容内容内容内容内容内容我是来凑字数的凑字数内容内容内容内容内容内容我是来凑字数的凑字数",
-			inforTime: "2016-1-29 12:00",
-			inforReadNum: "0",
-			imgSrc: "img/img.png"
-		}, {
-			hasPic: false,
-			inforHead: "过年啦要过年啦红红火火恍恍惚惚2",
-			inforContent: "内容内容内容内容内容内容我是来凑字数的凑字数内容内容内容内容内容内容我是来凑字数的凑字数内容内容内容内容内容内容我是来凑字数的凑字数内容内容内容内容内容内容我是来凑字数的凑字数内容内容内容内容内容内容我是来凑字数的凑字数内容内容内容内容内容内容我是来凑字数的凑字数",
-			inforTime: "2016-1-29 12:00",
-			inforReadNum: "0",
-			imgSrc: "img/h.png"
-		}, {
-			hasPic: true,
-			inforHead: "过年啦要过年啦红红火火恍恍惚惚3",
-			inforContent: "内容内容内容内容内容内容我是来凑字数的凑字数内容内容内容内容内容内容我是来凑字数的凑字数",
-			inforTime: "2016-1-29 12:00",
-			inforReadNum: "0",
-			imgSrc: "img/num_1.png"
-		}, {
-			hasPic: false,
-			inforHead: "过年啦要过年啦红红火火恍恍惚惚4",
-			inforContent: "内容内容内容内容内容内容我是来凑字数的凑字数内容内容内容内容内容内容我是来凑字数的凑字数",
-			inforTime: "2016-1-29 12:00",
-			inforReadNum: "0",
-			imgSrc: "img/num_2.png"
-		}, {
-			hasPic: true,
-			inforHead: "过年啦要过年啦红红火火恍恍惚惚5",
-			inforContent: "内容内容内容内容内容内容我是来凑字数的凑字数内容内容内容内容内容内容我是来凑字数的凑字数",
-			inforTime: "2016-1-29 12:00",
-			inforReadNum: "0",
-			imgSrc: "img/num_4.png"
-		}, {
-			hasPic: true,
-			inforHead: "过年啦要过年啦红红火火恍恍惚惚6",
-			inforContent: "内容内容内容内容内容内容我是来凑字数的凑字数内容内容内容内容内容内容我是来凑字数的凑字数",
-			inforTime: "2016-1-29 12:00",
-			inforReadNum: "0",
-			imgSrc: "img/h.png"
-		}, {
-			hasPic: false,
-			inforHead: "过年啦要过年啦红红火火恍恍惚惚7",
-			inforContent: "内容内容内容内容内容内容我是来凑字数的凑字数内容内容内容内容内容内容我是来凑字数的凑字数",
-			inforTime: "2016-1-29 12:00",
-			inforReadNum: "0",
-			imgSrc: "img/h.png"
-		}]
-	}
-});
-/*按钮刷新增加*/
-var vm = new Vue({
-	el: "#reload",
-	data: {
+		num: 1,
 		infors: [
 
 		]
+		
 	},
 	created: function() {
 		var that = this;
 		$.ajax({
+			url: 'http://120.27.137.151/api/infos-list/',
 			success: function(data) {
-				that.infors = data;
-			}
-		});
-
-	},
-	methods: {
-		reload: function(event) {
-			var that = this;
-			$.ajax({
-				url: 'xxx',
-				success: function(data) {
-					that.infors = that.infors.concat(data);
+				// console.log(data);
+				var abc=new Array();
+				for(i=0;i<7;i++){
+					abc.push(data.data.infors[i]);
 				}
-			});
-
-		}
-	}
-});
-
-var changeWidth = new Vue({
-	el: "#intr",
-	ready: function() {
-		$(".block").each(function() {
-			var firstChildTg = $(this).context.firstElementChild.tagName;
-			if (firstChildTg == "IMG") {} else {
-				$(this)[0].firstElementChild.style.width = "92%";
-				$(this)[0].firstElementChild.lastElementChild.style.width = "48.5%";
+				that.infors = abc;			
 			}
-
 		});
+	},
 
+	methods:{
+		refresh: function(event) {
+			var that = this;
+			that.num=that.num+1;
+			$.ajax({
+				url: 'http://120.27.137.151/api/infos-list?pageNum='+that.num,
+				success: function(data) {
+					that.infors = that.infors.concat(data.data.infors);	
+				} 				
+			});
+		},
+
+
+		changeWidth:function() {
+			intr.$watch('infors',function(){
+				console.log($(".block"));
+						$(".block").each(function() {
+							var firstChildTg = $(this).context.firstElementChild.tagName;
+							var firstChild = $(this)[0].firstElementChild;
+							var width = $(this)[0].firstElementChild.style.width;
+							if (firstChildTg == "IMG") {} else {
+								$(this)[0].firstElementChild.style.width = "92%";
+								$(this)[0].firstElementChild.lastElementChild.style.width = "48.5%";
+							}
+						});
+
+					});
+				}
 	}
-
 });
+intr.changeWidth();
+
+
+
+
+
 /*资料下载下载，*/
 var download = new Vue({
 	el: "#download",
@@ -129,3 +88,41 @@ var download = new Vue({
 		]
 	}
 });
+/*校园人物*/
+var person = new Vue({
+	el: "#person",
+	data: {
+		persons: [
+			]
+		},
+	methods:{
+		show:function(event){
+		var that = this;
+		$.ajax({
+		url: 'http://120.27.137.151/api/person-list/',
+		success: function(data) {
+					// console.log(data);
+					var personNum=new Array();
+					for(var i=0;i<4;i++){
+							personNum.push(data.data.persons[i]);
+							}
+							that.persons = personNum;				
+					},
+				});	
+			},
+
+		change:function() {
+			person.$watch('persons',function(){
+						// console.log($('#person').children());
+						// console.log($('#person').children()[0].style.left);
+						$('#person').children()[0].style.left='0px';
+					});
+				}
+		}
+});
+person.show();person.change();
+
+
+
+
+
