@@ -12,7 +12,6 @@ var intr = new Vue({
 		$.ajax({
 			url: 'http://120.27.137.151/api/infos-list/',
 			success: function(data) {
-				// console.log(data);
 				var abc=new Array();
 				for(i=0;i<7;i++){
 					abc.push(data.data.infors[i]);
@@ -37,7 +36,6 @@ var intr = new Vue({
 
 		changeWidth:function() {
 			intr.$watch('infors',function(){
-				// console.log($(".block"));
 						$(".block").each(function() {
 							var firstChildTg = $(this).context.firstElementChild.tagName;
 							var firstChild = $(this)[0].firstElementChild;
@@ -125,14 +123,25 @@ var person = new Vue({
 
 		change:function() {
 			person.$watch('persons',function(){
-						// console.log($('#person').children());
-						// console.log($('#person').children()[0].style.left);
 						$('#person').children()[0].style.left='0px';
 					});
 				}
 		}
 });
 person.show();person.change();
+
+var layout = new Vue({
+	el: "#layout",
+	data: {
+		title: '标题标题标题标题标题标题标题标题标题标题标题标题',
+		time: '2015/11/24 13:00 ',
+		author: '学生资助中心',
+		imgSrc: 'img/img.png',
+		article: '参考消息网',
+		likes: '0'
+	}
+});
+
 
 
 

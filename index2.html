@@ -100,8 +100,8 @@
 
 						<div class="downLoadBox" id="download" v-for="download in downloads">
 							<div class="day">
-								<span class="month">{{download.pushDay}}/</span>
-								<span class="secondDay">{{download.pushMouth}}月</span>
+								<span class="month">{{download.pushDay +'/'}}</span>
+								<span class="secondDay">{{download.pushMouth + ' 月'}}</span>
 							</div>
 							<div class="title">
 								{{download.resourceTitle}}
@@ -197,7 +197,7 @@
 		</div>
 
 	</body>
-	<script src="js/data2.js"></script>
+	<script src="js/data.js"></script>
 	<script src="js/index.js"></script>
 
 </html>
