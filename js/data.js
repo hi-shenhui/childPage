@@ -37,7 +37,7 @@ var intr = new Vue({
 
 		changeWidth:function() {
 			intr.$watch('infors',function(){
-				console.log($(".block"));
+				// console.log($(".block"));
 						$(".block").each(function() {
 							var firstChildTg = $(this).context.firstElementChild.tagName;
 							var firstChild = $(this)[0].firstElementChild;
@@ -62,32 +62,44 @@ intr.changeWidth();
 var download = new Vue({
 	el: "#download",
 	data: {
-		downloads: [{
-				pushDay: "23",
-				pushMouth: "12",
-				resourceTitle: "我的前半生"
-			}, {
-				pushDay: "23",
-				pushMouth: "12",
-				resourceTitle: "这个世界会好么"
-			}, {
-				pushDay: "23",
-				pushMouth: "12",
-				resourceTitle: "给青年诗人的信"
-			}, {
-				pushDay: "23",
-				pushMouth: "12",
-				resourceTitle: "杜诗详注"
-			}, {
-				pushDay: "23",
-				pushMouth: "12",
-				resourceTitle: "无人生还"
+		downloads: [
+			// {
+				// pushDay: "23",
+				// pushMouth: "12",
+				// resourceTitle: "我的前半生"
+			// }
+		]
+	},
+	methods:{
+		show:function(event){
+		var that = this;
+		$.ajax({
+		url: 'http://120.27.137.151/api/download/',
+		success: function(data) {
+					console.log(data);
+					var downloadList=new Array();
+					for(var i=0;i<5;i++){
+							downloadList.push(data.data.downloads[i]);
+							}
+							that.downloads = downloadList;				
+					},
+				});	
 			}
 
-
-		]
 	}
 });
+download.show();
+
+
+
+
+
+
+
+
+
+
+
 /*校园人物*/
 var person = new Vue({
 	el: "#person",

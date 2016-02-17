@@ -66,7 +66,7 @@
 				<div class="block" id="block" v-for="infor in infors"  >
 					<img class="content-img" v-if="infor.hasPic" title="{{infor.inforHead}}" alt="{{infor.inforHead}}" src="{{infor.imgSrc}}" />
 					<div class="intr">
-						<a href="#" class="headname" id="headname">{{infor.inforHead}}</a>
+						<a href="{{infor.url}}" class="headname" id="headname">{{infor.inforHead}}</a>
 						<p>{{infor.inforContent}}</p>
 						<div class="words">
 							<span class="time">{{infor.inforTime}}</span>
@@ -98,12 +98,14 @@
 
 						<div class="downLoadBox" id="download" v-for="download in downloads">
 							<div class="day">
-								<span class="month">{{download.pushDay}}/</span>
-								<span class="secondDay">{{download.pushMouth}}月</span>
+								<span class="month" >{{download.pushDay+"/"}} </span>
+								<span class="secondDay">{{download.pushMouth+" 月"}}</span>
 							</div>
-							<div class="title">
+							
+						<a href="{{download.downloadurl}}"><div class="title">
 								{{download.resourceTitle}}
-							</div>
+							</div></a>
+
 							<div class="clearFloat"></div>
 						</div>
 
