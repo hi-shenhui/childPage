@@ -13,6 +13,7 @@
 		<script src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/vue.min.js"></script>
 
+
 	</head>
 
 	<body>
@@ -39,8 +40,8 @@
 					<a href="#">互联家园</a>
 					<a href="#">香樟家园</a>
 				</div>
-				<img class="search-icon" src="img/search-icon.png" />
-				<input class="search-box" placeholder="请输入关键字" />
+				<button id="search"><img class="search-icon" src="img/search-icon.png" /></button>
+				<input class="search-box" id="searchInput" placeholder="请输入关键字" />
 				<div class="clearFloat"></div>
 			</div>
 		</div>
@@ -92,7 +93,7 @@
 
 			<!--左侧主要内容-->
 			<div class="right-content" v-cloak>
-				<div class="down">
+				<div class="down" v-cloak>
 					<div class="head-download">
 						<div class="downLoadWrapper">
 							<h1>资料下载</h1>
@@ -118,7 +119,7 @@
 
 					</div>
 				</div>
-				<div class="person">
+				<div class="person" v-cloak>
 					<div class="PersonWrapper">
 						<h1>校园人物</h1>
 						<button class="someMore">更多</button>
@@ -205,6 +206,7 @@
 
 	</body>
 	<script src="js/data.js"></script>
+	<script type="text/javascript" src="js/search.js"></script>
 	<script src="js/index.js"></script>
 
 </html>

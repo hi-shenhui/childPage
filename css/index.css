@@ -53,9 +53,11 @@ body {
 	float: left;
 	height: 46px;
 }
-.search-icon {
-	padding-top: 6px;
+#search {
 	float: right;
+    border: 0px;
+    background: transparent;
+    padding-top: 6px;
 }
 .column a {
 	display: inline-block;

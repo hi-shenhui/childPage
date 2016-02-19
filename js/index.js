@@ -114,3 +114,4 @@ changeer();
 
 	j2rolling_animation.init(); //是否开启自动轮播
 })(this.jQuery);
+

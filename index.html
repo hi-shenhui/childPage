@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="css/changePart1.css" />
 		<script src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/vue.min.js"></script>
+		
 	</head>
 
 	<body>
@@ -39,8 +40,8 @@
 					<a href="#">互联家园</a>
 					<a href="#">香樟家园</a>
 				</div>
-				<img class="search-icon" src="img/search-icon.png" />
-				<input class="search-box" placeholder="请输入关键字" />
+				<button id="search"><img class="search-icon" src="img/search-icon.png" /></button>
+				<input class="search-box" id="searchInput" placeholder="请输入关键字" />
 				<div class="clearFloat"></div>
 			</div>
 		</div>
@@ -79,8 +80,8 @@
 					</div>
 				</div>
 				<div class="shadow ">
-					<img class="shadow-l" src="img/shadow-l.png"></img>
-					<img class="shadow-r" src="img/shadow-r.png" /></img>
+					<img class="shadow-l" src="img/shadow-l.png" />
+					<img class="shadow-r" src="img/shadow-r.png" />
 					<div class="clearFloat"></div>
 				</div>
 				<div class="reload-icon" id="reload" v-on:click="refresh()"></div>
@@ -88,7 +89,7 @@
 
 			<!--左侧主要内容-->
 			<div class="right-content">
-				<div class="down">
+				<div class="down" v-cloak>
 					<div class="head-download">
 						<div class="downLoadWrapper">
 							<h1>资料下载</h1>
@@ -96,7 +97,7 @@
 							<div class="clearFloat"></div>
 						</div>
 
-						<div class="downLoadBox" id="download" v-for="download in downloads">
+						<div class="downLoadBox" id="download" v-for="download in downloads" v-cloak>
 							<div class="day">
 								<span class="month" >{{download.pushDay+"/"}} </span>
 								<span class="secondDay">{{download.pushMouth+" 月"}}</span>
@@ -113,7 +114,7 @@
 
 					</div>
 				</div>
-				<div class="person">
+				<div class="person" v-cloak>
 					<div class="PersonWrapper">
 						<h1>校园人物</h1>
 						<button class="someMore">更多</button>
@@ -123,7 +124,7 @@
 						<div class="section-focus-pic" id="section-focus-pic">
 							<div class="pages" data-scro="list">
 								
-								<ul id="person" >
+								<ul id="person" v-cloak>
 									
 									<li class="item" v-for="person in persons" >
 										<a href="{{person.url}}" target="_blank">
@@ -200,9 +201,10 @@
 			</div>
 		</div>
 
-		</script>
+		
 	</body>
-	<script src="js/data.js"></script>
-	<script src="js/index.js"></script>
+	<script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript" src="js/search.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
 
 </html>
