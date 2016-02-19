@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  >
+<html v-cloak>
 
 	<head>
 		<meta charset="utf-8" />
@@ -67,13 +67,13 @@
 					<img class="content-img" v-if="infor.hasPic" title="{{infor.inforHead}}" alt="{{infor.inforHead}}" src="{{infor.imgSrc}}" />
 					<div class="intr">
 						<a href="{{infor.url}}" class="headname" id="headname">{{infor.inforHead}}</a>
-						<p>{{infor.inforContent}}</p>
+						<p>{{infor.inforContent +"……"}}</p>
 						<div class="words">
 							<span class="time">{{infor.inforTime}}</span>
 							<span class="view">阅读数 {{infor.inforReadNum}}</span>
 							<div class="more">
 								<img id="more-icon" src="img/arrow.png" />
-								<span>查看详细</span>
+								<a href="{{infor.url}}">查看详细</a>
 							</div>
 						</div>
 					</div>
@@ -102,9 +102,11 @@
 								<span class="secondDay">{{download.pushMouth+" 月"}}</span>
 							</div>
 							
-						<a href="{{download.downloadurl}}"><div class="title">
+						<a href="{{download.downloadurl}}">
+							<div class="title">
 								{{download.resourceTitle}}
-							</div></a>
+							</div>
+						</a>
 
 							<div class="clearFloat"></div>
 						</div>
@@ -158,7 +160,7 @@
 
 		<!--更新按钮-->
 		<div class="link">
-			<div class="contents">
+			<div class="contents layout">
 				<ul class="links">
 					<li class="links_li">
 						<ul>

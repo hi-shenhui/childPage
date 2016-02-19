@@ -74,7 +74,7 @@ var download = new Vue({
 		$.ajax({
 		url: 'http://120.27.137.151/api/download/',
 		success: function(data) {
-					console.log(data);
+					// console.log(data);
 					var downloadList=new Array();
 					for(var i=0;i<5;i++){
 							downloadList.push(data.data.downloads[i]);
@@ -87,16 +87,6 @@ var download = new Vue({
 	}
 });
 download.show();
-
-
-
-
-
-
-
-
-
-
 
 /*校园人物*/
 var person = new Vue({
@@ -133,14 +123,42 @@ person.show();person.change();
 var layout = new Vue({
 	el: "#layout",
 	data: {
-		title: '标题标题标题标题标题标题标题标题标题标题标题标题',
-		time: '2015/11/24 13:00 ',
-		author: '学生资助中心',
-		imgSrc: 'img/img.png',
-		article: '参考消息网',
-		likes: '0'
+		// detail:[
+
+		// ]
+	},
+	methods:{
+		new:function(){
+		var that=this;
+		var Url=window.location.href;
+
+		var idNum=Url.split("?")[1]
+
+		var apiUrl="http://120.27.137.151/api/detail/?"+idNum;
+
+		
+
+		$.ajax({
+			url:apiUrl,	
+			success:function(data){
+					console.log(data.data);
+					// console.log(data.data);
+					var pageList=new Array();
+					for(var i=0;i<3;i++){
+						pageList.push(data.data);
+					}
+					// that.data=pageList;
+					layout.$data=pageList[0];
+
+
+			}
+		});
+		}
 	}
+	
 });
+layout.new();
+
 
 
 

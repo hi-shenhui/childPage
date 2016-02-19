@@ -31,7 +31,9 @@
 			<div class="layout">
 				<div class="column">
 					<a href="#">首页</a>
-					<a href="#">校园资讯</a>
+					<a href="index.html">校园资讯
+						<div class="arrow"></div>
+					</a>
 					<a href="#">学生教育</a>
 					<a href="#">学生管理</a>
 					<a href="#">互联家园</a>
@@ -48,7 +50,7 @@
 			<img class="home-icon" src="img/iconfont-home.png" />
 			<a href="#">当前位置  :</a>
 			<a href="#">家园首页  ></a>
-			<a href="#">校园资讯  ></a>
+			<a href="index.html">校园资讯  ></a>
 			<a href="#">校园动态  ></a>
 		</div>
 
@@ -60,9 +62,9 @@
 				<span class="author"> | 作者：{{author}}</span>
 				<div class="dotted"></div>
 				<div class="article">
-					<p>{{article}}</p>
+					<article>{{{article}}}</article>
 
-					<img src="{{imgSrc}}" />
+					<!-- <img src="{{imgSrc}}" /> -->
 
 				</div>
 
@@ -103,9 +105,14 @@
 								<span class="month">{{download.pushDay +'/'}}</span>
 								<span class="secondDay">{{download.pushMouth + ' 月'}}</span>
 							</div>
-							<div class="title">
+							<!-- <div class="title">
 								{{download.resourceTitle}}
-							</div>
+							</div> -->
+							<a href="{{download.downloadurl}}">
+								<div class="title">
+									{{download.resourceTitle}}
+								</div>
+							</a>
 							<div class="clearFloat"></div>
 						</div>
 
