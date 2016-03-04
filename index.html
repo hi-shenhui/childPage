@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html v-cloak>
+<!-- saved from url=(0022)http:/// -->
+<html v-cloak>	
 
 	<head>
 		<meta charset="utf-8" />
@@ -9,6 +10,7 @@
 		<link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" href="css/index.css" />
 		<link rel="stylesheet" href="css/changePart1.css" />
+		<link rel="stylesheet" type="text/css" href="http://daneden.github.io/animate.css/animate.min.css">
 		<script src="js/jquery.min.js"></script>
 		<!-- <script type="text/javascript" src="js/try.js"></script> -->
 	<script type="text/javascript" src="http://apps.bdimg.com/libs/vue/1.0.14/vue.js"></script>
@@ -16,6 +18,7 @@
 	</head>
 
 	<body>
+		
 		<div class="head-wrapper" id="top">
 			<div class="logo">
 				<div class="name-content">
@@ -65,7 +68,7 @@
 		<!--校园动态 ，信息公告，家园视点，媒体关注小节点切换-->
 		<div class="content-wrapper layout">
 			<div class="left-content" id="intr">
-				<div class="block" id="block" v-for="infor in infors"  >
+				<div class="block animated bounceInUp" id="block" v-for="infor in infors" >
 					<img class="content-img" v-if="infor.hasPic" title="{{infor.inforHead}}" alt="{{infor.inforHead}}" src="{{infor.imgSrc}}" />
 					<div class="intr">
 						<a href="{{infor.url}}" class="headname" id="headname">{{infor.inforHead}}</a>
@@ -85,7 +88,7 @@
 					<img class="shadow-r" src="img/shadow-r.png" />
 					<div class="clearFloat"></div>
 				</div>
-				<div class="reload-icon" id="reload" v-on:click="refresh()"></div>
+				<div class="reload-icon" id="reload" v-on:click="refresh()" ></div>
 			</div>
 
 			<!--左侧主要内容-->
@@ -94,14 +97,14 @@
 					<div class="head-download" id="down">
 						<div class="downLoadWrapper">
 							<h1>资料下载</h1>
-							<button class="more-download">更多</button>
+							<a class="more-download" href="http://jwc.ncu.edu.cn/zjcd/wj/bgxz/index.htm">更多</a>
 							<div class="clearFloat"></div>
 						</div>
 						
 				
 						<div class="downLoadBox" id="download" v-for="download in downloads" v-cloak>
 							<div class="day">
-								<span class="month" >{{download.pushDay+"/"}} </span>
+								<span class="month" >{{download.pushDay+" /"}} </span>
 								<span class="secondDay">{{download.pushMouth+" 月"}}</span>
 							</div>
 							
@@ -126,9 +129,9 @@
 						<div class="clearFloat"></div>
 
 						<div class="section-focus-pic" id="section-focus-pic">
-							<div class="pages" data-scro="list">
+							<div class="pages" data-scro="list" >
 								
-								<ul id="person" v-cloak>
+								<ul v-cloak id="person">
 									
 									<li class="item" v-for="person in persons" >
 										<a href="{{person.url}}" target="_blank">

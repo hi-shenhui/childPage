@@ -1,6 +1,6 @@
 <!DOCTYPE html>
+<!-- saved from url=(0022)http:/// -->
 <html v-cloak>
-
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,15 +9,16 @@
 		<link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" href="css/index.css" />
 		<link rel="stylesheet" href="css/changePart2.css" />
-
+		
 		<script src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/vue (2).js"></script>
-		<!-- <script type="text/javascript" src="http://apps.bdimg.com/libs/vue/1.0.14/vue.js"></script> -->
+		<!-- <script type="text/javascript" src="js/vue (2).js"></script> -->
+		<script type="text/javascript" src="http://apps.bdimg.com/libs/vue/1.0.14/vue.js"></script>
 
 
 	</head>
 
 	<body>
+		
 		<div class="head-wrapper" id="top">
 			<div class="logo">
 
@@ -98,7 +99,7 @@
 					<div class="head-download" id="down">
 						<div class="downLoadWrapper">
 							<h1>资料下载</h1>
-							<button class="more-download">更多</button>
+							<a class="more-download" href="http://jwc.ncu.edu.cn/zjcd/wj/bgxz/index.htm">更多</a>
 							<div class="clearFloat"></div>
 						</div>
 
@@ -106,7 +107,7 @@
 					
 						<div class="downLoadBox" id="download" v-for="download in downloads">
 							<div class="day">
-								<span class="month">{{download.pushDay +'/'}}</span>
+								<span class="month">{{download.pushDay +' /'}}</span>
 								<span class="secondDay">{{download.pushMouth + ' 月'}}</span>
 							</div>
 							<a href="{{download.downloadurl}}">
@@ -129,10 +130,10 @@
 						<div class="clearFloat"></div>
 
 						<div class="section-focus-pic" id="section-focus-pic">
-							<div class="pages" data-scro="list">
-								<ul id="person" v-for="person in persons">
+							<div class="pages" data-scro="list" >
+								<ul id="person">
 									
-									<li class="item">
+									<li class="item" v-for="person in persons">
 										<a href="{{person.url}}" target="_blank">
 											<img src="{{person.headpic}}" width="100%" height="265">
 										</a>
@@ -207,7 +208,7 @@
 		</div>
 
 	</body>
-	<script src="js/data.js"></script>
+	<script type="text/javascript" src="js/data.js"></script>
 	<script type="text/javascript" src="js/search.js"></script>
 	<script src="js/index.js"></script>
 

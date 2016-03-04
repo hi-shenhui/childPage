@@ -91,21 +91,21 @@ body {
 }
 .search-box {
 	font-family: "microsoft yahei";
-	color: #FFFFFF !important;
-	font-size: 16px;
-	line-height: 20px;
-	margin-top: 9px;
-	width: 290px;
-	line-height: 27px;
-	height: 30px;
-	border: 0px;
-	padding-left: 27px;
-	float: right;
-	border-bottom: 1px solid #FFFFFF;
-	background-color: transparent;
-	-ms-appearance: none;
-	border-bottom-right-radius: 8px;
-	border-bottom-left-radius: 8px;
+    color: #FFFFFF !important;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 9px;
+    width: 169px;
+    line-height: 27px;
+    height: 30px;
+    border: 0px;
+    padding-left: 27px;
+    float: right;
+    border-bottom: 1px solid #FFFFFF;
+    background-color: transparent;
+    -ms-appearance: none;
+    /* border-bottom-right-radius: 8px; */
+    /* border-bottom-left-radius: 8px; */
 }
 input::-webkit-input-placeholder {
 	color: #fff !important;

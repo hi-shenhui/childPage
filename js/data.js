@@ -53,30 +53,82 @@ var intr = new Vue({
 intr.changeWidth();
 
 /*资料下载下载，*/
+// var download = new Vue({
+// 	el: "#down",
+// 	data: {
+// 		downloads: [
+
+// 		]
+// 	},
+// 	created:function(){
+// 		var that = this;
+// 		$.ajax({
+// 			url: 'http://120.27.137.151/api/download/',
+// 			success: function(data) {
+// 						var def=new Array();
+// 						for(var d=0;d<data.data.downloads.length;d++){
+// 						 	def.push(data.data.downloads[d])
+// 						 }					
+// 						that.downloads=def;
+// 						// alert(def);
+// 					}
+// 		});	
+// 	}
+// });
+
 var download = new Vue({
 	el: "#down",
 	data: {
 		downloads: [
-
 		]
 	},
-	created:function(){
+	methods:{
+		show:function(event){
 		var that = this;
 		$.ajax({
-			url: 'http://120.27.137.151/api/download/',
-			success: function(data) {
-						var def=new Array();
-						for(var d=0;d<data.data.downloads.length;d++){
-						 	def.push(data.data.downloads[d])
-						 }					
-						that.downloads=def;
-						// alert(def);
+		url: 'http://120.27.137.151/api/download/',
+		success: function(data) {
+					// console.log(data);
+					var downloadList=new Array();
+					for(var i=0;i<data.data.downloads.length;i++){
+							downloadList.push(data.data.downloads[i]);
+							}
+							that.downloads = downloadList;				
 					}
-		});	
+				});	
+			}
+
 	}
 });
+download.show();
 
 /*校园人物*/
+// var person = new Vue({
+// 	el: "#person",
+// 	data: {
+// 		persons: [
+// 			]
+// 		},
+// 	methods:{
+// 		show:function(event){
+// 		var that = this;
+// 		$.ajax({
+// 		url: 'http://120.27.137.151/api/person-list/',
+// 		success: function(data) {	
+// 					that.persons = that.persons.concat(data.data.persons);			
+// 					}
+// 				});	
+// 			},
+
+// 		change:function() {
+// 			person.$watch('persons',function(){
+// 						$('#person').children()[0].style.left='0px';
+// 					});
+// 				}
+// 		}
+// });
+// person.show();person.change();
+
 var person = new Vue({
 	el: "#person",
 	data: {
@@ -89,24 +141,26 @@ var person = new Vue({
 		$.ajax({
 		url: 'http://120.27.137.151/api/person-list/',
 		success: function(data) {
-					// var personNum=new Array();
-					// for(var i=0;i<4;i++){
-					// 		personNum.push(data.data.persons[i]);
-					// 		}
-					// 		that.persons = personNum;	
-					that.persons = that.persons.concat(data.data.persons);			
+					// console.log(data);
+					var personNum=new Array();
+					for(var i=0;i<4;i++){
+							personNum.push(data.data.persons[i]);
+							}
+							that.persons = personNum;				
 					}
 				});	
 			},
 
 		change:function() {
+
 			person.$watch('persons',function(){
 						$('#person').children()[0].style.left='0px';
+						// alert("111");
 					});
 				}
 		}
 });
-person.show();person.change();
+person.show(); person.change();
 
 var layout = new Vue({
 	el: "#layout",
@@ -134,7 +188,7 @@ var layout = new Vue({
 layout.new();
 
 
-
+// person.show();person.change();
 
 
 

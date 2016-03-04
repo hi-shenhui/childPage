@@ -18,6 +18,15 @@ function changeer() {
 }
 changeer();
 
+// function addCssAn(){
+	
+// 		$("#reload").click(function(){
+// 		 $('#block').addClass('animated bounceInUp');
+// 		});
+
+	
+// }
+
 
 (function($) {
 	$("div[data-scro='controler'] b,div[data-scro='controler2'] a").click(function() {
