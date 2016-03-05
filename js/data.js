@@ -4,7 +4,9 @@ var intr = new Vue({
 		num: 1,
 		infors: [
 
-		]
+		],
+		isA: true,
+  		isB: true
 		
 	},
 	created: function() {
@@ -30,8 +32,11 @@ var intr = new Vue({
 						// alert('213');
 					 for(var i=0;i<data.data.infors.length;i++){
 					 	that.infors.push(data.data.infors[i])
-					 }	
-				} 				
+					 	}	
+					}
+					// function cssAn(){
+					// 	intr.$watch(,function)
+					// }				
 			});
 		},
 		changeWidth:function() {

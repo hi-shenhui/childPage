@@ -17,16 +17,22 @@ function changeer() {
 	}
 }
 changeer();
-
-// function addCssAn(){
+//固定右边下载和人物在页面上的高度
+function fixHight() {
+	var right=document.querySelector(".right-content");
 	
-// 		$("#reload").click(function(){
-// 		 $('#block').addClass('animated bounceInUp');
-// 		});
+	console.log(document.documentElement.clientHeight);
+	console.log(document.documentElement.scrollTop);
+	console.log(document.body.scrollTop);
+	console.log(document.body.scrollTop);
+	if (document.documentElement.scrollTop>0||document.body.scrollTop>0||document.body.scrollTop>0) {
+		alert("2333");
+	}
+	// var clientHeight = document.documentElement.clientHeight;
+	// var top = document.documentElement.scrollTop || document.body.scrollTop;
 
-	
-// }
-
+}
+fixHight();
 
 (function($) {
 	$("div[data-scro='controler'] b,div[data-scro='controler2'] a").click(function() {
