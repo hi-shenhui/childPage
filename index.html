@@ -1,217 +1,218 @@
 <!DOCTYPE html>
-<!-- saved from url=(0022)http:/// -->
-<html v-cloak>	
+<html>
 
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>家园网-校园资讯</title>
-		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="stylesheet" href="css/reset.css" />
-		<link rel="stylesheet" href="css/index.css" />
-		<link rel="stylesheet" href="css/changePart1.css" />
-		<link rel="stylesheet" type="text/css" href="http://daneden.github.io/animate.css/animate.min.css">
-		<script src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/vue.min.js"></script>
-	<!-- <script type="text/javascript" src="http://apps.bdimg.com/libs/vue/1.0.14/vue.js"></script> -->
-		
-	</head>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家园网-校园资讯</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/changePart1.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+   
+</head>
 
-	<body>
-		
-		<div class="head-wrapper" id="top">
-			<div class="logo">
-				<div class="name-content">
-
-					<div class="clearFloat"></div>
-				</div>
-			</div>
-			<img class="right-img" src="img/tri-bg-2.png">
-			<div class="clearFloat"></div>
-		</div>
-		<div class="search-content">
-			<div class="layout">
-				<div class="column">
-					<a href="#">
-						首页
-					</a>
-					<a href="#">
-						校园资讯
-						<div class="arrow"></div>
-					</a>
-					<a href="#">学生教育</a>
-					<a href="#">学生管理</a>
-					<a href="#">互联家园</a>
-					<a href="#">香樟家园</a>
-				</div>
-				<button id="search"><img class="search-icon" src="img/search-icon.png" /></button>
-				<input class="search-box" id="searchInput" placeholder="请输入关键字" />
-				<div class="clearFloat"></div>
-			</div>
-		</div>
-		<div class="clearFloat"></div>
-		<!--头部以及搜索框-->
-		<!--<div class="banner-wrapper layout">
-			<img class="home-icon" src="img/iconfont-home.png" />
-			<a href="#">当前位置  :</a>
-			<a href="#">家园首页  ></a>
-			<a href="#">校园资讯  ></a>
-			<a href="#">校园动态  ></a>
-		</div>-->
-		<!--当前位置-->
-		<div class="node-wrapper layout">
-			<button class="buttonActive">校园动态</button>
-			<button>信息公开</button>
-			<button>家园视点</button>
-			<button>媒体关注</button>
-		</div>
-		<!--校园动态 ，信息公告，家园视点，媒体关注小节点切换-->
-		<div class="content-wrapper layout">
-			<div class="left-content" id="intr">
-				<div class="block" id="block" v-for="infor in infors"  v-bind:class="{ 'animated': isA, 'fadeInUp': isB }">
-					<img class="content-img" v-if="infor.hasPic" title="{{infor.inforHead}}" alt="{{infor.inforHead}}" src="{{infor.imgSrc}}" />
-					<div class="intr">
-						<a href="{{infor.url}}" class="headname" id="headname">{{infor.inforHead}}</a>
-						<p>{{infor.inforContent +"……"}}</p>
-						<div class="words">
-							<span class="time">{{infor.inforTime}}</span>
-							<span class="view">阅读数 {{infor.inforReadNum}}</span>
-							<div class="more">
-								<img id="more-icon" src="img/arrow.png" />
-								<a href="{{infor.url}}">查看详细</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="shadow ">
-					<img class="shadow-l" src="img/shadow-l.png" />
-					<img class="shadow-r" src="img/shadow-r.png" />
-					<div class="clearFloat"></div>
-				</div>
-				<div class="reload-icon" id="reload" v-on:click="refresh()"  ></div>
-			</div>
-
-			<!--左侧主要内容-->
-			<div class="right-content">
-				<div class="down" v-cloak>
-					<div class="head-download" id="down">
-						<div class="downLoadWrapper">
-							<h1>资料下载</h1>
-							<a class="more-download" href="http://jwc.ncu.edu.cn/zjcd/wj/bgxz/index.htm">更多</a>
-							<div class="clearFloat"></div>
-						</div>
-						
-				
-						<div class="downLoadBox" id="download" v-for="download in downloads" v-cloak>
-							<div class="day">
-								<span class="month" >{{download.pushDay+" /"}} </span>
-								<span class="secondDay">{{download.pushMouth+" 月"}}</span>
-							</div>
-							
-						<a href="{{download.downloadurl}}">
-							<div class="title">
-								{{download.resourceTitle}}
-							</div>
-						</a>
-
-							<div class="clearFloat"></div>
-						</div>
-						
-					</div>
-				</div>
-
-
-				<div class="person" v-cloak>
-					<div class="PersonWrapper">
-						<h1>校园人物</h1>
-						<button class="someMore">更多</button>
-						<div class="line"></div>
-						<div class="clearFloat"></div>
-
-						<div class="section-focus-pic" id="section-focus-pic">
-							<div class="pages" data-scro="list" >
-								
-								<ul v-cloak id="person">
-									
-									<li class="item" v-for="person in persons" >
-										<a href="{{person.url}}" target="_blank">
-											<img src="{{person.headpic}}" width="100%" height="220">
-										</a>
-										<h3>
-				    <a href="{{person.url}}" target="_blank" style="color:#FFF;text-decoration:none;">{{person.personInfor}}</a>
-				</h3>
-										<div></div>
-									</li>
-									
-								</ul>
-							</div>
-							<div class="controler" data-scro="controler">
-								<b class="down">1</b>
-								<b>2</b>
-								<b>3</b>
-								<b>4</b>
-							</div>
-
-							<div class="controler2" data-scro="controler2">
-								<a href="javascript:;" class="prev"><i></i></a>
-								<a href="javascript:;" class="next"><i></i></a>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-			<!--资料下载，校园人物-->
-			<div class="clearFloat"></div>
-			
-		</div>
-
-		<!--更新按钮-->
-		<div class="link">
-			<div class="contents layout">
-				<ul class="links">
-					<li class="links_li">
-						<ul>
-							<li><a href="">南昌大学</a></li>
-							<li><a href="">南昌大学新闻网</a></li>
-							<li><a href="">南昌大学教务在线</a></li>
-							<li><a href="">南昌大学招就信息网</a></li>
-						</ul>
-					</li>
-					<li class="links_li">
-						<ul>
-							<li><a href="">南昌大学</a></li>
-							<li><a href="">南昌大学新闻网</a></li>
-							<li><a href="">南昌大学教务在线</a></li>
-							<li><a href="">南昌大学招就信息网</a></li>
-						</ul>
-					</li>
-					<li class="links_li" id="erContainer" style="position:relative;">
-						<a href="http://user.qzone.qq.com/1503241991" class="qq" index="1"></a>
-						<a href="http://weibo.com/ncuhome" class="weibo" index="2"></a>
-						<a href="http://wx.ncuhome.cn" class="weixin" index="3"></a>
-						<img src="img/weixiner.png" class="erweima">
-					</li>
-					<div class="clearFloat"></div>
-				</ul>
-			</div>
-		</div>
-		<div class="login">
-			<a href="http://passport.ncuhome.cn/NewXZZX/"></a>
-		</div>
-		<div class="return-top">
-			<a href="#top"></a>
-		</div>
-		<div class="footer">
-			<div class="contents">
-				<p>Copyright 2001-2015 Nanchang University. All Rights Reserved. 赣B2-20050168号/网备36011002000011号</p>
-			</div>
-		</div>
-
-		
-	</body>
-	<script type="text/javascript" src="js/data.js"></script>
-	<script type="text/javascript" src="js/search.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
+<body>
+    <div class="container">
+        <div class="logo">
+            <div class="nav-contents">
+                <a href="http://www.ncuhome.cn" id="logo">
+                    <img src="img/logo2.0.png" />
+                </a>
+            </div>
+        </div>
+        <div class="nav_bar" id="nav_bar">
+            <div class="nav-contents" style="position:relative;">
+                <ul class="navs " id="navs">
+                    <li class="nav pointon" index="1" topoint="72">首页</li>
+                    <li class="nav" index="2" topoint="136">校园资讯
+                        <ul toheight="101">
+                            <li><a href="">校园动态</a></li>
+                            <li><a href="">信息公开</a></li>
+                            <li><a href="">校园观点</a></li>
+                            <li><a href="">媒体关注</a></li>
+                            <div class="clear"></div>
+                        </ul>
+                    </li>
+                    <li class="nav" index="3" topoint="212">学生工作
+                        <ul toheight="101">
+                            <li><a href="">主题教育</a></li>
+                            <li><a href="http://www.ncuhome.cn/NewIndex2013/Newparty.aspx">学生党建</a></li>
+                            <li><a href="http://people.ncuhome.cn/">校园人物</a></li>
+                            <li><a href="">资料下载</a></li>
+                            <li><a href="http://www.ncuhome.cn/Newindex2013/NewInstitution.aspx">机构设置</a></li>
+                            <li><a href="http://www.ncuhome.cn/Default.aspx?partID=433">管理制度</a></li>
+                            <li><a href="http://passport.ncuhome.cn/NewXZZX/AppAssemble/xnbs.aspx">办事指南</a></li>
+                            <div class="clear"></div>
+                        </ul>
+                    </li>
+                    <li class="nav" index="4" topoint="290">互联家园
+                        <ul toheight="101">
+                            <li><a href="">新生指南</a></li>
+                            <li><a href="http://salon.ncuhome.cn/">活动讲座</a></li>
+                            <li><a href="http://cor.ncuhome.cn/">社团组织</a></li>
+                            <li><a href="">下载中心</a></li>
+                            <li><a href="http://special.ncuhome.cn/">家园专题</a></li>
+                            <li><a href="">南大映象</a></li>
+                            <li><a href="http://k.ncuhome.cn/know-all_1/index.html">百事通</a></li>
+                            <div class="clear"></div>
+                        </ul>
+                    </li>
+                    <li class="nav" index="5" topoint="365">生活服务
+                        <ul toheight="50">
+                            <li><a href="">教工服务</a></li>
+                            <li><a href="">学生服务</a></li>
+                            <div class="clear"></div>
+                        </ul>
+                    </li>
+                    <li class="nav" index="6" id="xzjy" topoint="440">香樟家园</li>
+                    <div class="clearFloat"></div>
+                    <!-- <div class="point" style="display:none;">
+                        <div class="pointCon"></div>
+                    </div> -->
+                </ul>
+                <div class="loading">
+                    <input type="text" id="searchInput" placeholder="请输入关键字" />
+                    <input type="button" id="search" value=" " />
+                </div>
+            </div>
+        </div>
+        <div class="clearFloat"></div>
+        <!--头部以及搜索框-->
+        <!--校园动态 ，信息公告，家园视点，媒体关注小节点切换-->
+        <div class="content-wrapper contents">
+            <div class="left-content" id="intr">
+                <div class="block" id="block" v-for="infor in infors" v-bind:class="{ 'animated': isA, 'fadeInUp': isB }">
+                    <img class="content-img" v-if="infor.hasPic" title="{{infor.inforHead}}" alt="{{infor.inforHead}}" src="{{infor.imgSrc}}" />
+                    <div class="intr">
+                        <a href="{{infor.url}}" class="headname" id="headname" target="_blank">{{infor.inforHead}}</a>
+                        <p>{{infor.inforContent +"……"}}</p>
+                        <div class="words">
+                            <span class="time">{{infor.inforTime}}</span>
+                            <span class="view">阅读数 {{infor.inforReadNum}}</span>
+                            <div class="more">
+                                <img id="more-icon" src="img/arrow.png" />
+                                <a href="{{infor.url}}">查看详细</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow ">
+                    <img class="shadow-l" src="img/shadow-l.png" />
+                    <img class="shadow-r" src="img/shadow-r.png" />
+                    <div class="clearFloat"></div>
+                </div>
+                <div class="reload-icon" id="reload" v-on:click="refresh()"></div>
+            </div>
+            <!--左侧主要内容-->
+            <div class="right-content">
+                <div class="down">
+                    <div class="head-download" id="down">
+                        <div class="downLoadWrapper">
+                            <h1>资料下载</h1>
+                            <a class="more-download" href="http://jwc.ncu.edu.cn/zjcd/wj/bgxz/index.htm">更多</a>
+                            <div class="clearFloat"></div>
+                        </div>
+                        <div class="downLoadBox" id="download" v-for="download in downloads" v-cloak>
+                            <div class="day">
+                                <span class="month">{{download.pushDay}} </span>
+                                <span class="secondDay">{{" / "+download.pushMouth+" 月"}}</span>
+                            </div>
+                            <a href="{{download.downloadurl}}">
+                                <div class="title">
+                                    {{download.resourceTitle}}
+                                </div>
+                            </a>
+                            <div class="clearFloat"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearFloat"></div>
+                <div class="person">
+                    <div class="PersonWrapper">
+                        <h1>校园人物</h1>
+                        <button class="someMore">更多</button>
+                        <div class="line"></div>
+                        <div class="clearFloat"></div>
+                        <div class="section-focus-pic" id="section-focus-pic">
+                            <div class="pages" data-scro="list">
+                                <ul v-cloak id="person">
+                                    <li class="item" v-for="person in persons">
+                                        <a href="{{person.url}}" target="_blank">
+                                            <img src="{{person.headpic}}" width="100%" height="100%">
+                                        </a>
+                                        <h3>
+                    <a href="{{person.url}}" target="_blank" style="color:#FFF;text-decoration:none;">{{person.personInfor}}</a>
+                </h3>
+                                        <div></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="controler" data-scro="controler">
+                                <b class="down">1</b>
+                                <b>2</b>
+                                <b>3</b>
+                                <b>4</b>
+                            </div>
+                            <div class="controler2" data-scro="controler2">
+                                <a href="javascript:;" class="prev"><i></i></a>
+                                <a href="javascript:;" class="next"><i></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--资料下载，校园人物-->
+            <div class="clearFloat"></div>
+        </div>
+        <!--更新按钮-->
+        <div class="link">
+            <div class="contents ">
+                <ul class="links">
+                    <li class="links_li">
+                        <ul>
+                            <li><a href="">南昌大学</a></li>
+                            <li><a href="">南昌大学新闻网</a></li>
+                            <li><a href="">南昌大学教务在线</a></li>
+                            <li><a href="">南昌大学招就信息网</a></li>
+                        </ul>
+                    </li>
+                    <li class="links_li">
+                        <ul>
+                            <li><a href="">南昌大学</a></li>
+                            <li><a href="">南昌大学新闻网</a></li>
+                            <li><a href="">南昌大学教务在线</a></li>
+                            <li><a href="">南昌大学招就信息网</a></li>
+                        </ul>
+                    </li>
+                    <li class="links_li" id="erContainer" style="position:relative;">
+                        <a href="http://user.qzone.qq.com/1503241991" class="qq" index="1"></a>
+                        <a href="http://weibo.com/ncuhome" class="weibo" index="2"></a>
+                        <a href="http://wx.ncuhome.cn" class="weixin" index="3"></a>
+                        <img src="img/weixiner.png" class="erweima">
+                    </li>
+                    <div class="clearFloat"></div>
+                </ul>
+            </div>
+        </div>
+        <div class="login">
+            <a href="http://passport.ncuhome.cn/NewXZZX/"></a>
+        </div>
+        <div id="back_top"></div>
+        <div class="footer">
+            <div class="contents">
+                <p>Copyright 2001-2015 Nanchang University. All Rights Reserved. 赣B2-20050168号/网备36011002000011号</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <script src="./js/xdr.js"></script>
+        <script type="text/javascript" src="./js/vue.min.js"></script>
+        <script type="text/javascript" src="./js/data.js"></script>
+        <script type="text/javascript" src="./js/search.js"></script>
+        <script type="text/javascript" src="./js/index.js"></script>
+    </div>
+</body>
 
 </html>

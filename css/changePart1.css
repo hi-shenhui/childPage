@@ -6,7 +6,7 @@
 .block {
 	position: relative;
 	width: 100%;
-	height: 210px;
+	height: 194px;
 	background-color: #FDFDFD;
 	overflow: hidden;
 }
@@ -42,19 +42,25 @@
 }
 .headname {
 	display: block;
-	font-size: 23px;
+	font-size: 20px;
 	margin-top: 20px;
 	margin-bottom: 10px;
 	font-weight: 500;
-	font-family: "microsoft yahei";
+	/*font-family: "microsoft yahei";*/
+	font-family: "Classic Grotesque W01","Hiragino Sans GB","Microsoft YaHei","STHeiti","WenQuanYi Micro Hei",Arial,SimSun,sans-serif;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	padding: 2px;
-	text-indent: 1em;
+	text-indent: 2em;
+}
+.headname:hover{
+	color: #2BAAE1;
+	/*text-decoration: underline;*/
+	font-weight: 500;
 }
 .block p {
-	font-size: 16px;
+	font-size: 15px;
 	font-weight: 500;
 	line-height: 23px;
 	height: 99px;
@@ -66,21 +72,24 @@
 }
 .words {
 	float: right;
-	width: 69%;
+	width: 68%;
 	height: 44px;
 	font-size: 13px;
 }
 .words span {
-	display: inline-block;
-	padding-left: 26px;
+	    margin-top: -0.23rem;
+    display:inherit;
+    padding-left: 4%;
+    padding-right: 4%;
 }
 .time {
 	float: left;
 }
 .more {
-	display: inline-block;
-	float: right;
-	color: #2BAAE1;
+	    margin-top: -16px;
+    display: inline-block;
+    float: right;
+    color: #2BAAE1;
 }
 #more-icon {
 	width: 25px;

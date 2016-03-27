@@ -151,7 +151,8 @@
 	font-weight: 200;
 }
 textarea {
-	font-family: 'microsoft yahei', Arial, Helvetica;
+	/*font-family: 'microsoft yahei', Arial, Helvetica;*/
+	font-family: "Classic Grotesque W01","Hiragino Sans GB","Microsoft YaHei","STHeiti","WenQuanYi Micro Hei",Arial,SimSun,sans-serif;
 	font-weight: 200;
 	font-size: 21px;
 	height: 158px;
@@ -165,4 +166,7 @@ article p img{
 	display: block;
     margin: 0 auto;
     max-width: 651px;
+}
+.comment-wrapper{
+	display: none;
 }
