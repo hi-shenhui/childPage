@@ -14,12 +14,7 @@
 	background-image: url(../img/wave3.png);
 }
 .block:first-child{
-	/*border-top:1px solid #E7E6E6; 
-	border-left: 1px solid #E7E6E6;
-	border-right: 1px solid #E7E6E6;
 
-	border-top-left-radius: 4px;
-    border-top-right-radius: 4px;*/
 }
 .content-img {
 	display: inline-block;
@@ -46,7 +41,6 @@
 	margin-top: 20px;
 	margin-bottom: 10px;
 	font-weight: 500;
-	/*font-family: "microsoft yahei";*/
 	font-family: "Classic Grotesque W01","Hiragino Sans GB","Microsoft YaHei","STHeiti","WenQuanYi Micro Hei",Arial,SimSun,sans-serif;
 	white-space: nowrap;
 	overflow: hidden;
