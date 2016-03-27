@@ -1,19 +1,16 @@
 body {
     background-color: #F4F4F4;
-
     font-family: "Classic Grotesque W01", "Hiragino Sans GB", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", Arial, SimSun, sans-serif;
 }
 
-
-
 html {
     font-size: 62.5%;
+    /*min-width: 96rem;*/
 }
 
 body {
     background-color: #f4f4f4;
 }
-
 
 .logo {
     margin: 0.2rem 0;
@@ -35,23 +32,26 @@ body {
 .our_url {
     font-size: 1.4rem;
 }
+
 .nav-contents {
     margin: 0 auto;
     width: 96rem;
     min-width: 96rem;
 }
+
 .contents {
     margin: 0 auto;
-    width: 85rem;
-    min-width: 85rem;
+    width: 96rem;
+    min-width: 96rem;
 }
-.column {
 
+.column {
     width: 64%;
     min-width: 600px;
     float: left;
     height: 46px;
 }
+
 .nav_bar {
     background-color: #2baae1;
     top: 0px;
@@ -144,7 +144,6 @@ body {
     background-color: #94D4F0;
 }
 
-
 .loading {
     position: absolute;
     right: 0rem;
@@ -189,8 +188,9 @@ body {
     margin: 0.3rem;
 }
 
-
-
+.home {
+    color: #f3f5f8;
+}
 
 .banner-wrapper {
     overflow: hidden;
@@ -202,7 +202,6 @@ body {
 .banner-wrapper a {
     font-size: 20px;
     color: #3B3A3A;
-
     font-family: "Classic Grotesque W01", "Hiragino Sans GB", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", Arial, SimSun, sans-serif;
     font-weight: 400;
 }
@@ -215,7 +214,6 @@ body {
 }
 
 .node-wrapper button {
-
     font-family: "Classic Grotesque W01", "Hiragino Sans GB", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", Arial, SimSun, sans-serif;
     display: inline-block;
     float: left;
@@ -268,7 +266,6 @@ body {
 }
 
 .more-download {
-
     font-family: "Classic Grotesque W01", "Hiragino Sans GB", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", Arial, SimSun, sans-serif;
     float: right;
     width: 72px;
@@ -345,7 +342,6 @@ body {
 }
 
 .someMore {
-
     font-family: "Classic Grotesque W01", "Hiragino Sans GB", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", Arial, SimSun, sans-serif;
     float: right;
     width: 72px;
@@ -388,7 +384,6 @@ body {
 
 .personImage h2 {
     width: 302px;
-
     font-family: "Classic Grotesque W01", "Hiragino Sans GB", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", Arial, SimSun, sans-serif;
     position: absolute;
     bottom: 10px;
@@ -443,7 +438,7 @@ body {
     overflow: hidden;
     width: 28.5%;
     /* height: 246px; */
-    height: 30%;
+    height: 34%;
     margin: 3px 0;
 }
 
@@ -458,7 +453,6 @@ body {
 }
 
 .section-focus-pic ul li h3 {
-
     font-family: "Classic Grotesque W01", "Hiragino Sans GB", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", Arial, SimSun, sans-serif;
     font-size: 11px;
     font-weight: normal;
@@ -490,14 +484,11 @@ body {
 
 .section-focus-pic .pages {
     width: 100%;
-
     height: 30%;
 }
 
 .section-focus-pic .controler {
-
     display: none;
-
 }
 
 .section-focus-pic .controler b {
@@ -576,9 +567,7 @@ body {
     margin-top: 31px;
 }
 
-.links {
-
-}
+.links {}
 
 .links .links_li {
     float: left;
@@ -666,6 +655,7 @@ body {
     background-size: cover;
 }
 
+
 /*.return-top a {
     position: fixed;
     bottom: 32%;
@@ -679,19 +669,21 @@ body {
 }
 */
 
-#back_top{
+#back_top {
     position: fixed;
     opacity: 0;
     right: 5rem;
     bottom: 5rem;
     z-index: 9999;
     height: 4.3rem;
-    width: 4.3rem;/*7.3*/
+    width: 4.3rem;
+    /*7.3*/
     background-color: red;
     cursor: pointer;
     background: url(../img/backtop.png);
     background-size: 100% 100%;
 }
+
 .footer {
     padding: 5px 0px;
 }
@@ -757,13 +749,13 @@ body {
     display: none;
 }
 
-
-.reload-icon:active,.reload-icon:hover{
+.reload-icon:active,
+.reload-icon:hover {
     transform: rotate(360deg);
--webkit-transition-property:all;
--webkit-transition-duration:2s;
--webkit-transition-delay:0s;
-animation-iteration-count:2;
--webkit-animation-iteration-count:2; 
--webkit-transition-timing-function:ease-in;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-delay: 0s;
+    animation-iteration-count: 2;
+    -webkit-animation-iteration-count: 2;
+    -webkit-transition-timing-function: ease-in;
 }

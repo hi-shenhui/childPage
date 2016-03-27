@@ -1,172 +1,195 @@
 .left-content h2 {
-	color: #272727;
-	font-size: 30px;
-	line-height: 41px;
-	padding: 0px 10px;
-	font-weight: 500;
-	margin-top: 8px;
-	margin-bottom: 35px;
-	text-align: center;
+    color: #272727;
+    font-size: 2rem;
+    line-height: 0rem;
+    padding: 0rem 1.0rem;
+    font-weight: 500;
+    margin-top: .8rem;
+    margin-bottom: 3.5rem;
+    text-align: center;
 }
+
 .left-content {
-	float: left;
-	width: 66.9%;
-	margin-right: 1%;
-	min-height: 1000px;
-	/* box-shadow: 11px 13px 43px 5px #C5C2C1; */
-	/* margin-bottom: 148px; */
+    float: left;
+    width: 66.9%;
+    margin-right: 1%;
+    min-height: 100rem;
+    /* box-shadow: 11rem 13rem 43rem 5rem #C5C2C1; */
+    /* margin-bottom: 148rem; */
 }
+
 .date {
-	font-size: 16px;
+    font-size: 1.2rem;
 }
+
 .author {
-	font-size: 16px;
+    font-size: 1.2rem;
 }
+
 .date,
 .author {
-	color: #868686;
-	display: inline-block;
-	margin-bottom: 10px;
-	padding-left: 12px;
+    color: #868686;
+    display: inline-block;
+    /*margin-bottom: 1.0rem;*/
+    padding-left: 1.2rem;
 }
+
 .article img {
-	/*width: 400px;
-	height: 225px;*/
+    /*width: 400rem;
+	height: 225rem;*/
 }
+
 .article p {
-	font-size: 17px;
-    line-height: 29px;
+    font-size: 1.3rem;
+    line-height: 1.9rem;
     text-indent: 2em;
     color: #272727;
     display: block;
 }
-.article article{
-	font-size: 17px;
-	line-height: 29px;
-	text-indent: 2em;
-	color: #272727;
+
+.article article {
+    font-size: 1.7rem;
+    line-height: 2.9rem;
+    text-indent: 2em;
+    color: #272727;
 }
+
 .dotted {
-	height: 3px;
-	width: 100%;
-	border-bottom: 2px dotted #919191;
-	margin-bottom: 7px;
+    height: 2rem;
+    width: 100%;
+    border-bottom: .2rem dotted #919191;
+    margin-bottom: .7rem;
 }
+
 .number-count {
-	float: left;
-	width: 210px;
-	height: 42px;
-	/*border: 1px solid #C5C2C1;*/
-	
-	margin-top: 12px;
-	margin-left: 10px;
+    float: left;
+    width: 21.0rem;
+    height: 4.2rem;
+    /*border: 1rem solid #C5C2C1;*/
+    margin-top: 1.2rem;
+    margin-left: 1.0rem;
 }
+
 .likes,
 .comments {
-	float: left;
-	width: 100px;
-	height: 50px;
+    float: left;
+    width: 10.0rem;
+    height: 5.0rem;
 }
+
 .likes-icon {
-	float: left;
-	background: url(../img/comment.png);
-	background-repeat: no-repeat;
-	background-position: 1px 1px;
-	width: 43px;
-	height: 53px;
+    float: left;
+    background: url(../img/comment.png);
+    background-repeat: no-repeat;
+    background-position: .1rem .1rem;
+    width: 4.3rem;
+    height: 5.3rem;
 }
+
 .likes-num {
-	float: left;
-	background: url(../img/comment.png);
-	background-repeat: no-repeat;
-	background-position: -47px 1px;
-	width: 47px;
-	height: 53px;
+    float: left;
+    background: url(../img/comment.png);
+    background-repeat: no-repeat;
+    background-position: -4.7rem 0.1rem;
+    width: 4.7rem;
+    height: 5.3rem;
 }
+
 .comments-icon {
-	float: left;
-	background: url(../img/comment.png);
-	background-repeat: no-repeat;
-	background-position: -108px -2px;
-	width: 52px;
-	height: 38px;
+    float: left;
+    background: url(../img/comment.png);
+    background-repeat: no-repeat;
+    background-position: -10.8rem -0.2rem;
+    width: 5.2rem;
+    height: 3.8rem;
 }
+
 .comments-num {
-	float: left;
-	background: url(../img/comment.png);
-	background-repeat: no-repeat;
-	background-position: -47px 1px;
-	width: 47px;
-	height: 53px;
+    float: left;
+    background: url(../img/comment.png);
+    background-repeat: no-repeat;
+    background-position: -4.7rem 1rem;
+    width: 4.7rem;
+    height: 5.3rem;
 }
+
 .likes-num,
 .comments-num {
-	font-size: 13px;
-	line-height: 44px;
-	text-align: center;
+    font-size: 1.3rem;
+    line-height: 4.4rem;
+    text-align: center;
 }
+
 .share {
-	width: 201px;
-	float: right;
-	height: 50px;
-	/*border: 1px solid #C5C2C1;*/
-	
-	margin-top: 10px;
+    width: 20.1rem;
+    float: right;
+    height: 5.0rem;
+    /*border: 1rem solid #C5C2C1;*/
+    margin-top: 1.0rem;
 }
+
 .share-info {
-	display: inline-block;
-	float: left;
-	font-size: 16px;
-	color: #474747;
-	line-height: 41px;
-	padding-right: 10px;
+    display: inline-block;
+    float: left;
+    font-size: 1.6rem;
+    color: #474747;
+    line-height: 4.1rem;
+    padding-right: 1.0rem;
 }
+
 .qq-share,
 .weixin-share,
 .weibo-share {
-	width: 45px;
-	height: 44px;
-	float: left;
-	border: 0px;
-	/* border: 1px solid; */
+    width: 4.5rem;
+    height: 4.4rem;
+    float: left;
+    border: 0rem;
+    /* border: 1rem solid; */
 }
+
 .qq-share {
-	background: url(../img/share-icon.png);
-	background-position: 0px 1px;
-	background-repeat: no-repeat;
+    background: url(../img/share-icon.png);
+    background-position: 0rem 1rem;
+    background-repeat: no-repeat;
 }
+
 .weixin-share {
-	background: url(../img/share-icon.png);
-	background-position: -46px 1px;
-	background-repeat: no-repeat;
+    background: url(../img/share-icon.png);
+    background-position: -46rem 1rem;
+    background-repeat: no-repeat;
 }
+
 .weibo-share {
-	background: url(../img/share-icon.png);
-	background-position: -92px 1px;
-	background-repeat: no-repeat;
+    background: url(../img/share-icon.png);
+    background-position: -92rem 1rem;
+    background-repeat: no-repeat;
 }
+
 .critic {
-	font-size: 30px;
-	color: #1A1A1A;
-	font-weight: 200;
+    font-size: 30rem;
+    color: #1A1A1A;
+    font-weight: 200;
 }
+
 textarea {
-	/*font-family: 'microsoft yahei', Arial, Helvetica;*/
-	font-family: "Classic Grotesque W01","Hiragino Sans GB","Microsoft YaHei","STHeiti","WenQuanYi Micro Hei",Arial,SimSun,sans-serif;
-	font-weight: 200;
-	font-size: 21px;
-	height: 158px;
-	padding: 10px 10px 10px 10px;
-	margin: 10px 0px 10px 0px;
-	width: 97%;
-	border: 1px solid #4EA9E0;
-	background-color: #F4F4F4;
+    /*font-family: 'microsoft yahei', Arial, Helvetica;*/
+    font-family: "Classic Grotesque W01", "Hiragino Sans GB", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", Arial, SimSun, sans-serif;
+    font-weight: 200;
+    font-size: 2.1rem;
+    height: 15.8rem;
+    padding: 1.0rem 1.0rem 1.0rem 1.0rem;
+    margin: 1.0rem 0rem 1.0rem 0rem;
+    width: 97%;
+    border: 1rem solid #4EA9E0;
+    background-color: #F4F4F4;
 }
-article p img{
-	display: block;
+
+article p img {
+    display: block;
     margin: 0 auto;
-    max-width: 651px;
+    max-width: 65.1rem;
 }
-.comment-wrapper{
-	display: none;
+
+.comment-wrapper {
+    display: none;
 }
