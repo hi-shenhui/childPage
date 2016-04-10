@@ -50,7 +50,10 @@ var intr = new Vue({
                     var firstChildTg = $(this).context.firstElementChild.tagName;
                     var firstChild = $(this)[0].firstElementChild;
                     var width = $(this)[0].firstElementChild.style.width;
-                    if (firstChildTg == "IMG") {} else {
+                    if (firstChildTg == "IMG") {
+                        // $(this)[0].firstElementChild.lastElementChild.style.width = "46.5%";
+                        // console.log($(this)[0].firstElementChild.lastElementChild);
+                    } else {
                         $(this)[0].firstElementChild.style.width = "92%";
                         $(this)[0].firstElementChild.lastElementChild.style.width = "46.5%";
                     }
