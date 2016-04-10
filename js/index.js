@@ -256,8 +256,8 @@ function getDemo(ID) {
 }
 window.onload = function() {
 	// alert("1112");
-    document.getElementsByTagName('html')[0].style.fontSize = (62.5 / 1366) * window.screen.availWidth + "%";
-    // document.getElementsByTagName('html')[0].style.minWidth = (52.5 / 1366) * window.screen.availWidth + "rem";
+    
+
 
     backTop = new backTopObj();
     backTop.init();

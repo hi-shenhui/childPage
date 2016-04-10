@@ -1,6 +1,6 @@
 body {
-    background-color: #F4F4F4;
-    font-family: "Classic Grotesque W01", "Hiragino Sans GB", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", Arial, SimSun, sans-serif;
+    font-family: 'Classic Grotesque W01', 'Hiragino Sans GB', 'Microsoft YaHei', 'STHeiti', 'WenQuanYi Micro Hei', Arial, SimSun, sans-serif;
+    background-color: #f4f4f4;
 }
 
 html {
@@ -8,7 +8,7 @@ html {
 }
 
 .logo {
-    margin: 0.2rem 0;
+    margin: .2rem 0;
 }
 
 .logo a {
@@ -29,44 +29,44 @@ html {
 }
 
 .nav-contents {
-    margin: 0 auto;
     width: 96rem;
     min-width: 96rem;
+    margin: 0 auto;
 }
 
 .contents {
-    margin: 0 auto;
     width: 96rem;
     min-width: 96rem;
+    margin: 0 auto;
 }
 
 .column {
+    float: left;
     width: 64%;
     min-width: 600rem;
-    float: left;
     height: 46rem;
 }
 
 .nav_bar {
-    background-color: #2baae1;
-    top: 0rem;
     z-index: 1999;
+    top: 0rem;
     width: 100%;
     min-width: 96rem;
+    background-color: #2baae1;
 }
 
 .navs {
-    padding-left: 5.1rem;
     position: relative;
+    padding-left: 5.1rem;
 }
 
 .nav {
-    float: left;
-    color: #f3f5f8;
     font-size: 1.5rem;
-    padding: 1.2rem 1.5rem;
     position: relative;
+    float: left;
+    padding: 1.2rem 1.5rem;
     cursor: pointer;
+    color: #f3f5f8;
 }
 
 .nav:hover ul {
@@ -78,24 +78,24 @@ html {
     /*top: 4.2rem;*/
     /*padding: 0rem 1rem;*/
     z-index: 9999;
-    background-color: #fff;
     overflow: hidden;
     transition: .5s;
-    transform-origin: top center;
     transform: scale(0);
+    transform-origin: top center;
     text-align: center;
+    background-color: #fff;
 }
 
 .nav:nth-child(2) ul,
 .nav:nth-child(5) ul {
-    width: 100%;
     left: 0rem;
+    width: 100%;
 }
 
 .nav:nth-child(3) ul,
 .nav:nth-child(4) ul {
-    width: 200%;
     left: -50%;
+    width: 200%;
 }
 
 .nav:nth-child(2) ul li,
@@ -109,16 +109,16 @@ html {
 }
 
 .nav ul li {
-    color: #000;
-    display: inline-block;
-    height: 3rem;
     line-height: 3rem;
-    text-align: center;
-    cursor: pointer;
+    display: inline-block;
     float: left;
-    border-right: 0.1rem solid #f4f4f4;
-    border-bottom: 0.1rem solid #f4f4f4;
-    margin-right: -0.2rem;
+    height: 3rem;
+    margin-right: -.2rem;
+    cursor: pointer;
+    text-align: center;
+    color: #000;
+    border-right: .1rem solid #f4f4f4;
+    border-bottom: .1rem solid #f4f4f4;
 }
 
 .nav ul li a {
@@ -126,26 +126,26 @@ html {
 }
 
 .nav ul li a:hover {
-    color: #434A54;
-    background-color: #E6E9ED;
+    color: #434a54;
+    background-color: #e6e9ed;
 }
 
 .nav ul li:hover {
-    background-color: #E6E9ED;
+    background-color: #e6e9ed;
 }
 
 .nav:hover {
     color: #40403e;
-    background-color: #94D4F0;
+    background-color: #94d4f0;
 }
 
 .loading {
     position: absolute;
+    top: .8rem;
     right: 0rem;
-    top: 0.8rem;
     padding: 0rem 1rem;
     background: url(../img/searchbg.png) no-repeat bottom;
-    background-size: 19.5rem 0.5rem;
+    background-size: 19.5rem .5rem;
 }
 
 .loading input {
@@ -153,34 +153,34 @@ html {
 }
 
 .loading #searchInput {
+    color: #fff;
     outline: none;
     background-color: #2baae1;
-    color: #fff;
 }
 
 .loading #search {
-    height: 2.4rem;
     width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
     background: url(../img/search.png) no-repeat 100% 100%;
     background-size: 80% 80%;
-    cursor: pointer;
 }
 
 .point {
-    transition: .7s;
-    width: 1.4rem;
-    height: 0.8rem;
     position: absolute;
+    bottom: -.1rem;
     overflow: hidden;
-    bottom: -0.1rem;
+    width: 1.4rem;
+    height: .8rem;
+    transition: .7s;
 }
 
 .pointCon {
-    height: 0.9rem;
-    width: 0.9rem;
-    background-color: #fff;
+    width: .9rem;
+    height: .9rem;
+    margin: .3rem;
     transform: rotateZ(45deg);
-    margin: 0.3rem;
+    background-color: #fff;
 }
 
 .home {
@@ -196,41 +196,42 @@ html {
 
 .banner-wrapper a {
     font-size: 2.0rem;
-    color: #3B3A3A;
     font-weight: 400;
+    color: #3b3a3a;
 }
 
 .node-wrapper {
     height: 4.5rem;
-    background-color: #EFEEEE;
     margin: 2.2rem auto;
-    box-shadow: .1rem .1rem .2rem .1rem #C5C2C1;
+    background-color: #efeeee;
+    box-shadow: .1rem .1rem .2rem .1rem #c5c2c1;
 }
 
 .node-wrapper button {
+    font-size: 1.8rem;
     display: inline-block;
     float: left;
     width: 11.0rem;
     height: 4.5rem;
-    background: transparent;
+    color: #3b3a3a;
     border: 0rem;
-    font-size: 1.8rem;
-    color: #3B3A3A;
+    background: transparent;
 }
 
 .node-wrapper button.buttonActive {
-    background-color: #65BFE7;
+    background-color: #65bfe7;
 }
 
 .content-wrapper {
-    margin-top: 2.4%;
     position: relative;
+    margin-top: 2.4%;
 }
 
 .left-content {
     float: left;
     width: 66.9%;
     margin-right: 1%;
+    padding-right: 1%;
     padding-left: 1%;
 }
 
@@ -241,38 +242,38 @@ html {
 }
 
 .down {
-    height: 62.1rem;
     width: 100%;
+    height: 62.1rem;
 }
 
 .head-download {
-    height: 3.8rem;
     position: relative;
-    border-bottom: .3rem solid #2BAAE1;
+    height: 3.8rem;
+    border-bottom: .3rem solid #2baae1;
 }
 
 .down h1 {
-    float: left;
-    padding: .7rem;
     font-size: 1.8rem;
     font-weight: 400;
+    float: left;
+    padding: .7rem;
 }
 
 .more-download {
-    float: right;
-    width: 7.2rem;
-    border: 0rem;
-    height: 100%;
-    color: #6C6B6B;
     font-size: 1.8rem;
     font-weight: 500;
+    float: right;
+    width: 7.2rem;
+    height: 100%;
     padding-top: 1.0rem;
+    color: #6c6b6b;
+    border: 0rem;
     background: transparent;
 }
 
 .downLoadBox {
-    height: 6.5rem;
     width: 100%;
+    height: 6.5rem;
     margin-top: 0rem;
 }
 
@@ -281,32 +282,32 @@ html {
 }
 
 .day {
+    font-size: 3.0rem;
     float: left;
     width: 24%;
     height: 80%;
-    font-size: 3.0rem;
     margin-top: .4rem;
-    background-color: #E3E3E3;
+    background-color: #e3e3e3;
 }
 
 .title {
-    float: left;
-    height: 66%;
-    width: 63%;
     font-size: 1.4rem;
+    font-weight: initial;
+    float: left;
+    width: 63%;
+    height: 66%;
+    margin-top: .4rem;
     /* font-weight: 200; */
     padding: .3rem;
-    font-weight: initial;
-    margin-top: .4rem;
 }
 
 .month {
     font-size: 2.3rem;
-    letter-spacing: .1rem;
     font-weight: 400;
     float: left;
     margin-top: .5rem;
     margin-left: .7rem;
+    letter-spacing: .1rem;
 }
 
 .downLoadWrapper {
@@ -315,11 +316,11 @@ html {
 
 .secondDay {
     font-size: 1.4rem;
-    letter-spacing: -0.15rem;
-    display: inline-block;
-    margin-top: 2.1rem;
     position: absolute;
     left: 3rem;
+    display: inline-block;
+    margin-top: 2.1rem;
+    letter-spacing: -.15rem;
 }
 
 .PersonWrapper {
@@ -328,24 +329,24 @@ html {
 
 .PersonWrapper h1 {
     font-size: 1.8rem;
-    float: left;
-    padding-left: .9rem;
-    padding-bottom: .6rem;
-    margin-top: 1.2rem;
     font-weight: 400;
+    float: left;
+    margin-top: 1.2rem;
+    padding-bottom: .6rem;
+    padding-left: .9rem;
 }
 
 .someMore {
-    font-family: "Classic Grotesque W01", "Hiragino Sans GB", "Microsoft YaHei", "STHeiti", "WenQuanYi Micro Hei", Arial, SimSun, sans-serif;
-    float: right;
-    width: 7.2rem;
-    border: .0rem;
-    height: 100%;
-    color: #6C6B6B;
+    font-family: 'Classic Grotesque W01', 'Hiragino Sans GB', 'Microsoft YaHei', 'STHeiti', 'WenQuanYi Micro Hei', Arial, SimSun, sans-serif;
     font-size: 1.8rem;
     font-weight: 500;
-    background: transparent;
+    float: right;
+    width: 7.2rem;
+    height: 100%;
     padding-top: 1.5rem;
+    color: #6c6b6b;
+    border: .0rem;
+    background: transparent;
 }
 
 .personImage {
@@ -355,40 +356,40 @@ html {
 
 .imageWrapper {
     position: relative;
-    height: 19.3rem;
     width: 30.2rem;
+    height: 19.3rem;
     margin-top: 2.5rem;
 }
 
 .imageWrapper img {
-    height: 19.3rem;
     width: 31.4rem;
-    box-shadow: .9rem 1.0rem 2.0rem .4rem #C5C2C1;
+    height: 19.3rem;
+    box-shadow: .9rem 1.0rem 2.0rem .4rem #c5c2c1;
 }
 
 .underwords {
-    color: #fff;
     position: absolute;
+    bottom: .2rem;
     width: 30.2rem;
     height: 4.0rem;
-    bottom: .2rem;
+    opacity: .5;
+    color: #fff;
     background: #000;
-    opacity: 0.5;
 }
 
 .personImage h2 {
-    width: 30.2rem;
+    font-size: 1.4rem;
+    font-weight: 200;
     position: absolute;
     bottom: 1.0rem;
-    color: #fff;
+    overflow: hidden;
+    width: 30.2rem;
     margin: 0rem;
     padding: .4rem 0rem;
     padding-left: .8rem;
-    font-size: 1.4rem;
-    font-weight: 200;
     white-space: nowrap;
-    overflow: hidden;
     text-overflow: ellipsis;
+    color: #fff;
 }
 
 .shadow-l,
@@ -403,24 +404,28 @@ html {
 .shadow-l {
     position: absolute;
     left: 0rem;
-    height: 5.0rem;
     width: 29.1rem;
-    margin-top: -0.9rem;
+    height: 5.0rem;
+    margin-top: -.9rem;
 }
 
 .shadow-r {
     position: absolute;
     right: 0rem;
-    height: 4.2rem;
     width: 28.3rem;
-    margin-top: -0.6rem;
+    height: 4.2rem;
+    margin-top: -.6rem;
 }
 
 .line {
-    height: 4.0rem;
     width: 100%;
-    border-bottom: .3rem solid #2BAAE1;
+    height: 4.0rem;
     margin: 1.0rem 0rem;
+    border-bottom: .3rem solid #2baae1;
+}
+
+.item img {
+    object-fit: cover;
 }
 
 
@@ -458,8 +463,8 @@ html {
 }
 
 .section-focus-pic ul li h3 a {
-    white-space: pre-wrap;
     overflow: hidden;
+    white-space: pre-wrap;
     text-overflow: ellipsis;
 }
 
@@ -555,11 +560,9 @@ html {
 /*底部footer*/
 
 .link {
-    background-color: #ecf0f1;
     margin-top: 2.1rem;
+    background-color: #ecf0f1;
 }
-
-.links {}
 
 .links .links_li {
     float: left;
@@ -571,16 +574,14 @@ html {
     margin: 3.7rem 0rem;
 }
 
-.links_li:nth-child {}
-
 .links_li:nth-child(2) {
     width: 33%;
 }
 
 .links_li a {
-    color: #474f57;
     font-size: 1.4rem;
     line-height: 2.7rem;
+    color: #474f57;
 }
 
 .footer {
@@ -588,23 +589,24 @@ html {
 }
 
 .footer p {
-    text-align: center;
-    color: #ebebeb;
     font-size: 1.2rem;
     line-height: 3rem;
+    text-align: center;
+    color: #ebebeb;
 }
+
 .links_li span {
-    height: 2.4rem;
-    width: 2.4rem;
     display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
     margin: 7.9rem 4.3rem 0 0;
     background-size: 100% 100%;
 }
 
 #erContainer a {
-    height: 3.2rem;
-    width: 3.2rem;
     display: inline-block;
+    width: 3.2rem;
+    height: 3.2rem;
     margin: 6.8rem 3.3rem 0 0;
     background-size: 100% 100%;
 }
@@ -625,8 +627,8 @@ html {
     position: absolute;
     top: 3.3rem;
     right: -10.7rem;
-    height: 10.0rem;
     width: 10.0rem;
+    height: 10.0rem;
 }
 
 .erweima:hover {
@@ -636,28 +638,28 @@ html {
 
 .login a {
     position: fixed;
-    bottom: 48%;
     right: 4.8rem;
+    bottom: 48%;
     width: 4.5rem;
     height: 4.5rem;
     background: url(../img/login-top.png);
-    background-position: -0.3rem 0.2rem;
     background-repeat: no-repeat;
+    background-position: -.3rem .2rem;
     background-size: cover;
 }
 
 #back_top {
     position: fixed;
-    opacity: 0;
+    z-index: 9999;
     right: 5rem;
     bottom: 5rem;
-    z-index: 9999;
-    height: 4.3rem;
     width: 4.3rem;
+    height: 4.3rem;
+    cursor: pointer;
+    opacity: 0;
+    background: url(../img/backtop.png);
     /*7.3*/
     background-color: red;
-    cursor: pointer;
-    background: url(../img/backtop.png);
     background-size: 100% 100%;
 }
 
@@ -711,8 +713,6 @@ html {
     .links_li:first-child,
     .links_li:nth-child(2) {
         width: 31%;
-        /* margin: 47rem 0rem;
-    overflow: hidden;*/
     }
     .links_li:nth-child(2) {
         width: 31%;
@@ -723,17 +723,13 @@ html {
     }
 }
 
-[v-cloak]: {
-    display: none;
-}
-
 .reload-icon:active,
 .reload-icon:hover {
-    transform: rotate(360deg);
-    -webkit-transition-property: all;
-    -webkit-transition-duration: 2s;
     -webkit-transition-delay: 0s;
-    animation-iteration-count: 2;
-    -webkit-animation-iteration-count: 2;
     -webkit-transition-timing-function: ease-in;
+    -webkit-transition-duration: 2s;
+    -webkit-transition-property: all;
+    transform: rotate(360deg);
+    -webkit-animation-iteration-count: 2;
+    animation-iteration-count: 2;
 }

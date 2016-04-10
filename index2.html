@@ -9,8 +9,11 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/changePart2.css" />
-    </style>
+    <link rel="stylesheet" href="css/details.css" />
+    <script type="text/javascript">   
+    document.getElementsByTagName('html')[0].style.fontSize = (62.5 / 1440) * window.screen.availWidth + "%";
+    </script>
+   </script>
 </head>
 
 <body>
@@ -78,19 +81,19 @@
         </div>
         <div class="clearFloat"></div>
         <div class="content-wrapper contents">
-            <div class="left-content" id="layout" v-cloak>
-                <h2>{{title}}</h2>
-                <span class="date">{{time}}</span>
-                <span class="author"> | 作者：{{author}}</span>
+            <div class="left-content" id="layout"  v-cloak>
+                <h2 v-text="title"></h2>
+                <span class="date" v-text="time"></span>
+                <span class="author">{{" | 作者："+author}}</span>
                 <div class="dotted"></div>
                 <div class="article">
-                    <article>{{{article}}}</article>
+                    <article >{{{article}}}</article>
                 </div>
                 <div class="comment-wrapper">
                     <div class="number-count">
                         <div class="likes">
                             <div class="likes-icon"></div>
-                            <div class="likes-num">{{likes}}</div>
+                            <div class="likes-num" v-text='likes'></div>
                         </div>
                     </div>
                     <div class="share">
@@ -114,12 +117,12 @@
                         </div>
                         <div class="downLoadBox" id="download" v-for="download in downloads" v-cloak>
                             <div class="day">
-                                <span class="month">{{download.pushDay}}</span>
-                                <span class="secondDay">{{" / "+download.pushMouth+" 月"}}</span>
+                                <span class="month" v-text="download.pushDay"></span>
+                                <span class="secondDay" v-text="download.pushMouth | month ' /' ' 月'"></span>
                             </div>
                             <a href="{{download.downloadurl}}">
-                                <div class="title">
-                                    {{download.resourceTitle}}
+                                <div class="title" v-text="download.resourceTitle">
+                                    
                                 </div>
                             </a>
                             <div class="clearFloat"></div>
@@ -138,10 +141,10 @@
                                 <ul v-cloak id="person">
                                     <li class="item" v-for="person in persons">
                                         <a href="{{person.url}}" target="_blank">
-                                            <img src="{{person.headpic}}" width="100%" height="100%">
+                                            <img :src="person.headpic" width="100%" height="100%">
                                         </a>
                                         <h3>
-                    <a href="{{person.url}}" target="_blank" style="color:#FFF;text-decoration:none;">{{person.personInfor}}</a>
+                    <a href="{{person.url}}" target="_blank" v-text='person.personInfor' style="color:#FFF;text-decoration:none;"></a>
                 </h3>
                                         <div></div>
                                     </li>
@@ -207,8 +210,8 @@
 </body>
 <script src="js/jquery.min.js"></script>
 <script src="./js/xdr.js"></script>
-<script type="text/javascript" src="js/vue.min.js"></script>
-<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript" src="js/inner.js"></script>
 <script type="text/javascript" src="js/search.js"></script>
 <script src="js/index.js"></script>
 
