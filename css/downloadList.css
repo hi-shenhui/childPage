@@ -1,0 +1,50 @@
+.intr {
+    float: left;
+    width: 99%;
+    height: 100%;
+    margin-left: 1%;
+    color: #5f5e5e;
+}
+
+.words {
+    font-size: 1.1rem;
+}
+
+.words span {
+    /*font-size: 1.1rem;*/
+    display: inherit;
+    /* margin-top: -.23rem; */
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.main {
+    margin: 0;
+}
+
+.words {
+    float: left;
+    /*width: inherit;*/
+    margin-left: 2rem;
+}
+
+.words span {
+    float: left;
+    padding-left: 1.2rem;
+}
+
+.more {
+    margin-top: 0;
+    margin-right: 5%;
+}
+
+.more a {
+       font-size: 1.3rem;
+}
+.downloadIcon{
+	transform:rotate(90deg);
+-ms-transform:rotate(90deg); 	
+-moz-transform:rotate(90deg); 	
+-webkit-transform:rotate(90deg); 
+-o-transform:rotate(90deg); 
+}

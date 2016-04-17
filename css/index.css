@@ -301,20 +301,20 @@ html {
     padding: .3rem;
 }
 
-.month {
+.Day {
     font-size: 2.3rem;
     font-weight: 400;
     float: left;
     margin-top: .5rem;
     margin-left: .7rem;
-    letter-spacing: .1rem;
+    letter-spacing: -0.3rem;
 }
 
 .downLoadWrapper {
     margin-bottom: 1.2rem;
 }
 
-.secondDay {
+.month {
     font-size: 1.4rem;
     position: absolute;
     left: 3rem;
@@ -719,7 +719,7 @@ html {
     }
     .link,
     .footer {
-        min-width: 96rem;
+        min-width: 104.0rem;
     }
 }
 
@@ -738,14 +738,6 @@ html {
     .contents {
         width: 85rem;
         min-width: 85rem;
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 1066px) {
-    .contents {
-        width: 80rem;
-        min-width: 80rem;
         margin: 0 auto;
     }
 }

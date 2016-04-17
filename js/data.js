@@ -3,11 +3,7 @@ var intr = new Vue({
 
     data: {
         num: 1,
-        infors: [
-
-        ]
-       
-
+        infors: []
     },
 
     created: function() {
@@ -99,7 +95,7 @@ var download = new Vue({
     }
 });
 download.show();
-Vue.filter('month', function(value, begin ,end) {
+Vue.filter('month', function(value, begin, end) {
     return begin + value + end
 });
 
@@ -140,4 +136,3 @@ var person = new Vue({
 });
 person.show();
 person.change();
-
