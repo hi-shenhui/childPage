@@ -83,7 +83,6 @@
         <div class="content-wrapper contents">
             <div class="left-content" id="intr">
                 <div class="block animated fadeInUp" id="block" v-for="info in infos">
-                    
                     <div class="intr">
                         <a href="{{info.documentUrl}}" class="headname" id="headname" target="_blank" v-text="info.documentTitle"></a>
                         <p v-text="info.documentIntr"></p>
@@ -92,16 +91,14 @@
                             <span class="view">{{"阅读量："+info.readNum}}</span>
                             <span class="time">{{"下载量："+info.downloadNum}}</span>
                             <!-- <span class="view" v-text="info.readNum | wrap '阅读量：' "></span> -->
-
-                            
                         </div>
                         <div class="more">
-                                <img id="more-icon" src="img/arrow.png" />
-                                <a href="{{info.documentUrl}}">查看详细</a>
+                            <img id="more-icon" src="img/arrow.png" />
+                            <a href="{{info.documentUrl}}">查看详细</a>
                         </div>
                         <div class="more">
-                                <img id="more-icon" class="downloadIcon"src="img/arrow.png" />
-                                <a href="{{info.documentUrl}}">直接下载</a>
+                            <img id="more-icon" class="downloadIcon" src="img/arrow.png" />
+                            <a href="{{info.documentUrl}}">直接下载</a>
                         </div>
                     </div>
                 </div>
@@ -118,20 +115,18 @@
                     <div class="head-download" id="down">
                         <div class="downLoadWrapper">
                             <h1>资料推荐</h1>
-                            <a class="more-download" href="http://jwc.ncu.edu.cn/zjcd/wj/bgxz/index.htm">更多</a>
+                            <a class="more-download" target="blank_" href="http://jwc.ncu.edu.cn/zjcd/wj/bgxz/index.htm">更多</a>
                             <div class="clearFloat"></div>
                         </div>
-                        <div class="downLoadBox" id="download" v-for="download in downloads" v-cloak>
+                        <div class="downLoadBox" id="download" v-for="download in downloads"  v-cloak>
                             <div class="day">
-                                <!-- <span class="Day" v-text="download.pushDay | day '0' "></span> -->
-                                <span class="Day" v-text="download.pushDay "></span>
-                                <span class="month" v-text="download.pushMouth | month ' /' ' 月'"></span>
+                                <span class="Day" id="days" v-text="download.pushDay| concatZero '0'" ></span>
+                                <span class="month" v-text="download.pushMouth | month ' /' '月'"></span>
                             </div>
                             <a href="{{download.downloadurl}}">
-    <div class="title" v-text="download.resourceTitle">
-    </div>
-</a>
-
+                                <a class="title" v-text="download.resourceTitle">
+                                </a>
+                            </a>
                             <div class="clearFloat"></div>
                         </div>
                     </div>

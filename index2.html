@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/details.css" />
-    <script type="text/javascript">   
+    <script type="text/javascript">
     document.getElementsByTagName('html')[0].style.fontSize = (62.5 / 1440) * window.screen.availWidth + "%";
     </script>
-   </script>
+    </script>
 </head>
 
 <body>
@@ -81,13 +81,13 @@
         </div>
         <div class="clearFloat"></div>
         <div class="content-wrapper contents">
-            <div class="left-content" id="layout"  v-cloak>
+            <div class="left-content" id="layout" v-cloak>
                 <h2 v-text="title"></h2>
                 <span class="date" v-text="time"></span>
                 <span class="author">{{" | 作者："+author}}</span>
                 <div class="dotted"></div>
                 <div class="article">
-                    <article >{{{article}}}</article>
+                    <article>{{{article}}}</article>
                 </div>
                 <div class="comment-wrapper">
                     <div class="number-count">
@@ -117,13 +117,12 @@
                         </div>
                         <div class="downLoadBox" id="download" v-for="download in downloads" v-cloak>
                             <div class="day">
-                                <span class="month" v-text="download.pushDay"></span>
-                                <span class="secondDay" v-text="download.pushMouth | month ' /' ' 月'"></span>
+                                <span class="Day" id="days" v-text="download.pushDay| concatZero '0'"></span>
+                                <span class="month" v-text="download.pushMouth | month ' /' '月'"></span>
                             </div>
                             <a href="{{download.downloadurl}}">
-                                <div class="title" v-text="download.resourceTitle">
-                                    
-                                </div>
+                                <a class="title" v-text="download.resourceTitle">
+                                </a>
                             </a>
                             <div class="clearFloat"></div>
                         </div>

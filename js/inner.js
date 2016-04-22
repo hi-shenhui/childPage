@@ -48,16 +48,20 @@ var download = new Vue({
             $.ajax({
                 url: 'http://120.27.137.151:8585/api/download/',
                 success: function(data) {
-                    // console.log(data);
                     var downloadList = new Array();
                     for (var i = 0; i < data.data.downloads.length; i++) {
                         downloadList.push(data.data.downloads[i]);
+                        var pushDay = data.data.downloads[i].pushDay;
+                        if (pushDay<10) {
+                            Vue.filter('concatZero', function(value, input) {
+                            return input+value
+                        })
+                        }
                     }
                     that.downloads = downloadList;
                 }
             });
         }
-
     }
 });
 download.show();

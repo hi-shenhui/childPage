@@ -116,14 +116,13 @@
                         </div>
                         <div class="downLoadBox" id="download" v-for="download in downloads" v-cloak>
                             <div class="day">
-                                <span class="month" v-text="download.pushDay"></span>
-                                <span class="secondDay" v-text="download.pushMouth | month ' /' ' 月'"></span>
+                                <span class="Day" id="days" v-text="download.pushDay| concatZero '0'" ></span>
+                                <span class="month" v-text="download.pushMouth | month ' /' '月'"></span>
                             </div>
                             <a href="{{download.downloadurl}}">
-    <div class="title" v-text="download.resourceTitle">
-    </div>
-</a>
-
+                                <a class="title" v-text="download.resourceTitle">
+                                </a>
+                            </a>
                             <div class="clearFloat"></div>
                         </div>
                     </div>

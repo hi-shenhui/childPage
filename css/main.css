@@ -151,3 +151,6 @@ font-size: 1.3rem;
     padding-left: .1rem;
     color: #2baae1;
 }
+a.title :hover{
+    color: red;
+}

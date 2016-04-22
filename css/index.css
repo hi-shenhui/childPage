@@ -157,7 +157,21 @@ html {
     outline: none;
     background-color: #2baae1;
 }
-
+input[placeholder]{
+    color: #fff;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+color: #fff; 
+} 
+input:-moz-placeholder, textarea:-moz-placeholder { 
+color: #fff; 
+} 
+input::-moz-placeholder, textarea::-moz-placeholder { 
+color: #fff; 
+} 
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+color: #fff; 
+} 
 .loading #search {
     width: 2.4rem;
     height: 2.4rem;
@@ -299,6 +313,9 @@ html {
     margin-top: .4rem;
     /* font-weight: 200; */
     padding: .3rem;
+}
+a.title:hover{
+    color: #2BAAE1;
 }
 
 .Day {
